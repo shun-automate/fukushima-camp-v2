@@ -112,6 +112,8 @@ img{display:block;max-width:100%}
 .stop.side-left .stop-tag-panel{margin-left:10%;margin-right:0}
 .stop.side-right .stop-tag-panel{margin-right:10%;margin-left:auto;text-align:right}
 .stop-tag-cat{font-family:'Cormorant Garamond',serif;font-size:.72rem;letter-spacing:.18em;display:block;margin-bottom:.25rem;color:var(--tag-color,var(--wood))}
+.tag-icon{width:16px;height:16px;object-fit:contain;vertical-align:-3px;margin-right:.35em;filter:drop-shadow(0 1px 1px rgba(0,0,0,.18))}
+.stop.side-right .stop-tag-cat .tag-icon{margin-right:0;margin-left:.35em}
 .stop-tag-title{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:1.1rem;color:var(--ink)}
 
 .stop-desc{width:80%;margin-top:.8rem;font-size:.8rem;color:var(--ink-soft);line-height:1.8}
@@ -133,6 +135,7 @@ img{display:block;max-width:100%}
 }
 .stop.compact .compact-text{font-size:.85rem;font-weight:500}
 .stop.compact .compact-tag{font-family:'Cormorant Garamond',serif;font-size:.65rem;letter-spacing:.14em;color:var(--tag-color,var(--wood));display:block}
+.stop.compact .compact-tag .tag-icon{margin-right:.3em;width:14px;height:14px;vertical-align:-2px}
 
 .arrow-wrap{position:relative;z-index:1;margin:0;padding:.2rem 1.4rem;pointer-events:none}
 .arrow-wrap svg{width:100%;height:40px;display:block;color:var(--wood);opacity:.55}
@@ -208,7 +211,7 @@ footer{text-align:center;padding:2rem 1rem 3.5rem;font-size:.68rem;color:var(--i
     <div class="stop compact reveal">
       <div class="compact-card">
         <div class="compact-badge">7:30</div>
-        <div class="compact-text"><span class="compact-tag" style="--tag-color:var(--wood)">移動</span>自宅を出発</div>
+        <div class="compact-text"><span class="compact-tag" style="--tag-color:var(--wood)"><img class="tag-icon" src="img/icon-transport.png" alt="">移動</span>自宅を出発</div>
       </div>
     </div>
     <div class="arrow-wrap flow-r"><svg viewBox="0 0 200 60" fill="none"><path d="M10,45 C 70,60 130,5 185,20" stroke="#8B6239" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="1 10"/><path d="M185,20 L175,14 M185,20 L175,27" stroke="#8B6239" stroke-width="2.5" stroke-linecap="round"/></svg></div>
@@ -221,7 +224,7 @@ footer{text-align:center;padding:2rem 1rem 3.5rem;font-size:.68rem;color:var(--i
           <input type="file" class="photo-input" accept="image/*" data-target="photo-forest">
           <div class="stop-badge">11:00</div>
         </div>
-        <div class="stop-tag-panel"><span class="stop-tag-cat">11:00 — 観光</span><span class="stop-tag-title">エンゼルフォレスト白河 着</span></div>
+        <div class="stop-tag-panel"><span class="stop-tag-cat"><img class="tag-icon" src="img/icon-sight.png" alt="">11:00 — 観光</span><span class="stop-tag-title">エンゼルフォレスト白河 着</span></div>
         <div class="stop-desc">湖を囲む森のリゾートに到着。空気が変わる瞬間、旅がはじまる。</div>
       </div>
     </div>
@@ -230,7 +233,7 @@ footer{text-align:center;padding:2rem 1rem 3.5rem;font-size:.68rem;color:var(--i
     <div class="stop compact reveal">
       <div class="compact-card">
         <div class="compact-badge">11:05</div>
-        <div class="compact-text"><span class="compact-tag" style="--tag-color:var(--pine-deep)">観光</span>散歩</div>
+        <div class="compact-text"><span class="compact-tag" style="--tag-color:var(--pine-deep)"><img class="tag-icon" src="img/icon-sight.png" alt="">観光</span>散歩</div>
       </div>
     </div>
     <div class="arrow-wrap flow-r"><svg viewBox="0 0 200 60" fill="none"><path d="M10,45 C 70,60 130,5 185,20" stroke="#8B6239" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="1 10"/><path d="M185,20 L175,14 M185,20 L175,27" stroke="#8B6239" stroke-width="2.5" stroke-linecap="round"/></svg></div>
@@ -246,7 +249,7 @@ footer{text-align:center;padding:2rem 1rem 3.5rem;font-size:.68rem;color:var(--i
     <div class="stop compact reveal">
       <div class="compact-card">
         <div class="compact-badge">14:00</div>
-        <div class="compact-text"><span class="compact-tag" style="--tag-color:var(--pine-deep)">観光</span>カヌー体験</div>
+        <div class="compact-text"><span class="compact-tag" style="--tag-color:var(--pine-deep)"><img class="tag-icon" src="img/icon-sight.png" alt="">観光</span>カヌー体験</div>
       </div>
     </div>
     <div class="arrow-wrap flow-l"><svg viewBox="0 0 200 60" fill="none"><path d="M190,20 C 130,5 70,60 15,45" stroke="#8B6239" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="1 10"/><path d="M15,45 L25,39 M15,45 L23,52" stroke="#8B6239" stroke-width="2.5" stroke-linecap="round"/></svg></div>
@@ -304,7 +307,7 @@ footer{text-align:center;padding:2rem 1rem 3.5rem;font-size:.68rem;color:var(--i
           <input type="file" class="photo-input" accept="image/*" data-target="photo-ouchi">
           <div class="stop-badge">10:50</div>
         </div>
-        <div class="stop-tag-panel"><span class="stop-tag-cat">10:50 — 観光</span><span class="stop-tag-title">大内宿</span></div>
+        <div class="stop-tag-panel"><span class="stop-tag-cat"><img class="tag-icon" src="img/icon-sight.png" alt="">10:50 — 観光</span><span class="stop-tag-title">大内宿</span></div>
         <div class="stop-desc">茅葺き屋根が続く江戸の宿場町。まっすぐ伸びる道をゆっくり歩く。</div>
       </div>
     </div>
@@ -327,7 +330,7 @@ footer{text-align:center;padding:2rem 1rem 3.5rem;font-size:.68rem;color:var(--i
     <div class="stop compact reveal">
       <div class="compact-card">
         <div class="compact-badge">13:40</div>
-        <div class="compact-text"><span class="compact-tag" style="--tag-color:var(--wood)">移動</span>出発</div>
+        <div class="compact-text"><span class="compact-tag" style="--tag-color:var(--wood)"><img class="tag-icon" src="img/icon-transport.png" alt="">移動</span>出発</div>
       </div>
     </div>
     <div class="arrow-wrap flow-l"><svg viewBox="0 0 200 60" fill="none"><path d="M190,20 C 130,5 70,60 15,45" stroke="#8B6239" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="1 10"/><path d="M15,45 L25,39 M15,45 L23,52" stroke="#8B6239" stroke-width="2.5" stroke-linecap="round"/></svg></div>
@@ -340,7 +343,7 @@ footer{text-align:center;padding:2rem 1rem 3.5rem;font-size:.68rem;color:var(--i
           <input type="file" class="photo-input" accept="image/*" data-target="photo-tonohetsuri">
           <div class="stop-badge">14:00</div>
         </div>
-        <div class="stop-tag-panel"><span class="stop-tag-cat">14:00 — 観光</span><span class="stop-tag-title">塔のへつり</span></div>
+        <div class="stop-tag-panel"><span class="stop-tag-cat"><img class="tag-icon" src="img/icon-sight.png" alt="">14:00 — 観光</span><span class="stop-tag-title">塔のへつり</span></div>
         <div class="stop-desc">奇岩が連なる渓谷に吊り橋がかかる。水面に映る緑を見下ろしながら対岸へ。</div>
       </div>
     </div>
@@ -354,7 +357,7 @@ footer{text-align:center;padding:2rem 1rem 3.5rem;font-size:.68rem;color:var(--i
           <input type="file" class="photo-input" accept="image/*" data-target="photo-kokuzo">
           <div class="stop-badge">14:30</div>
         </div>
-        <div class="stop-tag-panel"><span class="stop-tag-cat">14:30 — 観光</span><span class="stop-tag-title">虚空蔵菩薩</span></div>
+        <div class="stop-tag-panel"><span class="stop-tag-cat"><img class="tag-icon" src="img/icon-sight.png" alt="">14:30 — 観光</span><span class="stop-tag-title">虚空蔵菩薩</span></div>
         <div class="stop-desc">岩をくり抜いた本堂で手を合わせる。旅の終わりに静かなひととき。</div>
       </div>
     </div>
@@ -363,7 +366,7 @@ footer{text-align:center;padding:2rem 1rem 3.5rem;font-size:.68rem;color:var(--i
     <div class="stop compact reveal">
       <div class="compact-card">
         <div class="compact-badge">15:30</div>
-        <div class="compact-text"><span class="compact-tag" style="--tag-color:var(--wood)">移動</span>出発</div>
+        <div class="compact-text"><span class="compact-tag" style="--tag-color:var(--wood)"><img class="tag-icon" src="img/icon-transport.png" alt="">移動</span>出発</div>
       </div>
     </div>
     <div class="arrow-wrap flow-r"><svg viewBox="0 0 200 60" fill="none"><path d="M10,45 C 70,60 130,5 185,20" stroke="#8B6239" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="1 10"/><path d="M185,20 L175,14 M185,20 L175,27" stroke="#8B6239" stroke-width="2.5" stroke-linecap="round"/></svg></div>
@@ -371,7 +374,7 @@ footer{text-align:center;padding:2rem 1rem 3.5rem;font-size:.68rem;color:var(--i
     <div class="stop compact reveal">
       <div class="compact-card">
         <div class="compact-badge">18:00</div>
-        <div class="compact-text"><span class="compact-tag" style="--tag-color:var(--wood)">移動</span>自宅到着</div>
+        <div class="compact-text"><span class="compact-tag" style="--tag-color:var(--wood)"><img class="tag-icon" src="img/icon-transport.png" alt="">移動</span>自宅到着</div>
       </div>
     </div>
 
