@@ -38,10 +38,8 @@ input,textarea{-webkit-user-select:text!important;user-select:text!important;-we
 [data-theme="dark"] .hero::before{background:radial-gradient(ellipse at 25% 60%,rgba(232,147,90,.18) 0%,transparent 55%),radial-gradient(ellipse at 75% 25%,rgba(126,155,94,.18) 0%,transparent 50%)}
 .hero-content{position:relative;z-index:2;text-align:center;padding:2rem}
 .hero-label{font-family:'Caveat',cursive;color:var(--ember);font-size:1.3rem;letter-spacing:.15em;margin-bottom:1rem;opacity:0;animation:fadeUp .8s ease-out .3s forwards;text-shadow:0 2px 10px rgba(0,0,0,.45),0 1px 2px rgba(0,0,0,.5)}
-.hero-ribbon{position:relative;display:inline-block;margin:0 auto;padding:1.1rem 2.4rem;opacity:0;animation:fadeUp .8s ease-out .5s forwards}
-.hero-ribbon::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--pine-deep),var(--pine));clip-path:polygon(2.5% 0%,97.5% 0%,100% 20%,100% 80%,97.5% 100%,2.5% 100%,0% 80%,0% 20%);box-shadow:0 10px 26px rgba(0,0,0,.3);z-index:-1}
-.hero-ribbon::after{content:'';position:absolute;left:6px;right:6px;top:6px;bottom:6px;border:1.5px solid rgba(253,247,232,.4);clip-path:polygon(2.5% 0%,97.5% 0%,100% 20%,100% 80%,97.5% 100%,2.5% 100%,0% 80%,0% 20%);z-index:-1}
-.hero-title{font-family:'Zen Old Mincho',serif;font-size:clamp(2.4rem,7vw,4.2rem);color:#FAF8F3;letter-spacing:.15em;text-shadow:0 4px 20px rgba(0,0,0,.5),0 2px 6px rgba(0,0,0,.55)}
+.hero-ribbon{position:relative;display:inline-block;margin:0 auto;opacity:0;animation:fadeUp .8s ease-out .5s forwards}
+.hero-title{font-family:'Zen Old Mincho',serif;font-size:clamp(2.6rem,8vw,4.6rem);color:#FAF8F3;letter-spacing:.15em;text-shadow:0 4px 20px rgba(0,0,0,.5),0 2px 6px rgba(0,0,0,.55);white-space:nowrap}
 .hero-dates{font-size:1rem;color:var(--gold-light);letter-spacing:.25em;margin-bottom:2.5rem;opacity:0;animation:fadeUp .8s ease-out .7s forwards;text-shadow:0 2px 8px rgba(0,0,0,.5),0 1px 2px rgba(0,0,0,.55)}
 .hero-divider{width:60px;height:1px;background:var(--ember);margin:0 auto 2rem;opacity:0;animation:fadeUp .8s ease-out .6s forwards;box-shadow:0 1px 6px rgba(0,0,0,.4)}
 .hero-meta{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;opacity:0;animation:fadeUp .8s ease-out .9s forwards}
@@ -130,30 +128,36 @@ input,textarea{-webkit-user-select:text!important;user-select:text!important;-we
 .now-label{display:none;position:absolute;left:58px;top:-1.1rem;font-size:.68rem;color:var(--ember-deep);font-weight:700}
 .timeline-item.now-here .now-label{display:block}
 .timeline-time-col{position:absolute;left:0;top:0;width:56px;display:flex;flex-direction:column;align-items:center;gap:.35rem}
-.timeline-time{font-size:.66rem;color:var(--ink-faint);font-weight:700;white-space:nowrap;font-family:'Zen Old Mincho',serif}
-.timeline-dot{width:24px;height:24px;border-radius:50%;background:var(--ink-faint);border:3px solid var(--warm-white);z-index:1;display:flex;align-items:center;justify-content:center;font-size:.72rem;box-shadow:0 1px 4px rgba(0,0,0,.15)}
+.timeline-time{font-size:.66rem;color:var(--ink-faint);font-weight:700;white-space:nowrap;font-family:'Zen Old Mincho',serif;transition:transform .2s,color .2s}
+.timeline-dot{width:24px;height:24px;border-radius:50%;background:var(--ink-faint);border:3px solid var(--warm-white);z-index:1;display:flex;align-items:center;justify-content:center;font-size:.72rem;box-shadow:0 1px 4px rgba(0,0,0,.15);transition:transform .2s,box-shadow .2s}
 .timeline-dot.transport{background:var(--transport)}
 .timeline-dot.food{background:var(--food)}
 .timeline-dot.sight{background:var(--sight)}
 .timeline-dot.hotel{background:var(--hotel)}
-.timeline-card{background:none;border:none;box-shadow:none;padding:0;cursor:default}
+.timeline-card{background:none;border:none;box-shadow:none;padding:0;cursor:pointer}
 .timeline-item{-webkit-touch-callout:none;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
-.card-header{display:flex;flex-direction:column;gap:.15rem}
-.card-title{font-size:1.02rem;font-weight:700;font-family:'Zen Old Mincho',serif;order:2}
-.card-category{font-family:'Caveat',cursive;font-size:1rem;font-weight:600;letter-spacing:.04em;white-space:nowrap;order:1;display:inline-flex;align-items:center;gap:.3rem}
+.timeline-item:active .timeline-dot{transform:scale(1.2);box-shadow:0 4px 12px rgba(0,0,0,.28)}
+.timeline-item:active .timeline-time{transform:scale(1.08) translateY(-1px);color:var(--ink)}
+.timeline-item:active .card-title{transform:translateX(3px)}
+.timeline-item:active .card-photo{transform:scale(1.035)}
+.card-header{display:flex;flex-direction:column;gap:.15rem;position:relative;z-index:2;margin-top:.5rem;transition:margin-top .3s}
+.card-title{font-size:1.05rem;font-weight:700;font-family:'Zen Old Mincho',serif;order:2;transition:transform .2s,color .2s}
+.card-category{font-family:'Caveat',cursive;font-size:1.05rem;font-weight:600;letter-spacing:.04em;white-space:nowrap;order:1;display:inline-flex;align-items:center;gap:.3rem;transition:color .2s,text-shadow .2s}
 .card-category.transport{color:var(--transport)}
 .card-category.food{color:var(--food)}
 .card-category.sight{color:var(--sight)}
 .card-category.hotel{color:var(--hotel)}
-.card-cat-icon{width:20px;height:20px;object-fit:contain;filter:drop-shadow(0 1px 1px rgba(0,0,0,.15))}
 .card-detail{font-size:.8rem;color:var(--ink-light);margin-top:.5rem;line-height:1.75}
 .card-bottom{display:flex;align-items:center;gap:.8rem;margin-top:.7rem;flex-wrap:wrap}
 .card-link{font-size:.7rem;color:var(--transport);text-decoration:none;padding:.15rem 0;border-bottom:1px solid rgba(139,98,57,.35)}
 .card-cost-wrap{display:flex;align-items:center;gap:.3rem;font-size:.75rem;color:var(--ink-faint)}
 .card-cost-input{width:70px;border:none;border-bottom:1px dashed rgba(128,128,128,.3);padding:.2rem .1rem;font-size:.78rem;font-family:inherit;text-align:right;background:none;color:var(--ink)}
-.card-photo-wrap{position:relative;width:90%;max-width:420px;aspect-ratio:4/3;margin:1rem auto .3rem 0;overflow:visible;display:none}
+.card-photo-wrap{position:relative;width:94%;max-width:460px;aspect-ratio:1/1;margin:.6rem 0 0 0;overflow:visible;display:none}
 .card-photo-wrap.has-photo{display:block}
-.card-photo{width:100%;height:100%;object-fit:cover;border-radius:46% 54% 55% 45% / 55% 45% 55% 45%;-webkit-mask-image:radial-gradient(ellipse 74% 74% at 50% 50%,#000 58%,transparent 100%);mask-image:radial-gradient(ellipse 74% 74% at 50% 50%,#000 58%,transparent 100%);filter:drop-shadow(0 10px 20px rgba(90,60,20,.18))}
+.card-photo{width:100%;height:100%;object-fit:cover;border-radius:46% 54% 55% 45% / 55% 45% 55% 45%;-webkit-mask-image:radial-gradient(ellipse 76% 76% at 50% 50%,#000 60%,transparent 100%);mask-image:radial-gradient(ellipse 76% 76% at 50% 50%,#000 60%,transparent 100%);filter:drop-shadow(0 14px 24px rgba(90,60,20,.22));transition:transform .25s}
+.card-photo-wrap.has-photo + .card-header{margin-top:-3.6rem;padding:0 .3rem}
+.card-photo-wrap.has-photo + .card-header .card-category{color:rgba(255,255,255,.95);text-shadow:0 2px 8px rgba(0,0,0,.6),0 1px 3px rgba(0,0,0,.5)}
+.card-photo-wrap.has-photo + .card-header .card-title{color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.65),0 1px 4px rgba(0,0,0,.6)}
 .photo-btn{display:inline-flex;align-items:center;gap:.3rem;font-size:.68rem;color:var(--ink-faint);border:1px dashed rgba(139,98,57,.35);border-radius:6px;padding:.2rem .6rem;cursor:pointer;background:none;font-family:inherit}
 .photo-input{display:none}
 
@@ -201,7 +205,7 @@ footer{text-align:center;padding:3rem 1rem;font-size:.72rem;color:var(--ink-fain
 .hero{min-height:56vh}
 .hero-content{padding:1.2rem}
 .hero-label{font-size:1.05rem;margin-bottom:.5rem}
-.hero-title{font-size:clamp(2.3rem,13vw,3.2rem);margin-bottom:.3rem}
+.hero-title{font-size:clamp(1.9rem,12.5vw,3.2rem);letter-spacing:.08em;margin-bottom:.3rem}
 .hero-divider{margin:0 auto 1rem}
 .hero-dates{font-size:.85rem;letter-spacing:.15em;margin-bottom:1.2rem}
 .hero-meta{gap:1.2rem}
@@ -555,14 +559,13 @@ function renderDay(dayKey, elId){
     el.addEventListener('touchstart', function(){}, { passive: true });
     el.dataset.time = it.time;
     let mapLink = it.map ? '<a href="https://maps.google.com/maps?q=' + encodeURIComponent(it.map + ' 福島県') + '" target="_blank" rel="noopener" class="card-link">📍 MAP</a>' : '';
-    let catIcon = CAT_IMG[it.cat] ? '<img class="card-cat-icon" src="' + CAT_IMG[it.cat] + '" alt="">' : '';
     el.innerHTML =
       '<div class="timeline-time-col"><div class="timeline-time">' + it.time + '</div><div class="timeline-dot ' + it.cat + '">' + CAT_ICON[it.cat] + '</div></div>' +
       '<span class="now-label">📍 NOW</span>' +
       '<div class="timeline-card ' + it.cat + '">' +
-        '<div class="card-header"><span class="card-category ' + it.cat + '">' + catIcon + CAT_LABEL[it.cat] + '</span><div class="card-title">' + it.title + '</div></div>' +
-        (it.detail ? '<div class="card-detail">' + it.detail + '</div>' : '') +
         '<div class="card-photo-wrap" id="photowrap-' + key + '"><img class="card-photo" id="photo-' + key + '"></div>' +
+        '<div class="card-header"><span class="card-category ' + it.cat + '">' + CAT_LABEL[it.cat] + '</span><div class="card-title">' + it.title + '</div></div>' +
+        (it.detail ? '<div class="card-detail">' + it.detail + '</div>' : '') +
         '<div class="card-bottom">' +
           mapLink +
           '<div class="card-cost-wrap">💴 <input type="number" min="0" placeholder="0" class="card-cost-input" data-key="' + key + '"> 円</div>' +
