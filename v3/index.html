@@ -104,9 +104,6 @@ input,textarea{-webkit-user-select:text!important;user-select:text!important;-we
 .memo-textarea{width:100%;min-height:80px;border:1px dashed rgba(128,128,128,.25);border-radius:8px;padding:.8rem 1rem;font-family:'Zen Kaku Gothic New',sans-serif;font-size:.85rem;line-height:1.8;background:var(--card-bg);color:var(--ink);resize:vertical;transition:border-color .3s,background .4s;-webkit-user-select:text;user-select:text;-webkit-touch-callout:default}
 .memo-textarea:focus{border-color:var(--ember);outline:2px solid rgba(232,147,90,.3);outline-offset:1px}
 
-.mark{position:relative;display:flex;justify-content:center;align-items:center;gap:.8rem;margin:2.2rem 0 .4rem}
-.mark::before,.mark::after{content:'';width:34px;height:1px;background:var(--wood);opacity:.4}
-.mark-badge{color:var(--pine-deep);font-family:'Caveat',cursive;font-weight:700;font-size:1.3rem;letter-spacing:.15em}
 .day-section{padding-top:1.4rem}
 .day-heading{display:flex;align-items:baseline;gap:.8rem;margin-bottom:1.6rem}
 .day-heading .badge{font-family:'Zen Old Mincho',serif;background:var(--ink);color:var(--warm-white);font-size:.8rem;padding:.25rem .8rem;border-radius:12px}
@@ -291,8 +288,6 @@ footer{text-align:center;padding:3rem 1rem;font-size:.72rem;color:var(--ink-fain
     <textarea class="memo-textarea" id="memoText" placeholder="持ち物や現地メモを自由に書けます"></textarea>
   </div>
 
-  <div class="mark"><span class="mark-badge">START</span></div>
-
   <div class="day-section" id="day1">
     <div class="day-heading"><span class="badge">DAY 1</span><span class="date">8/21（金）</span></div>
     <div class="timeline" data-day="2026-08-21" id="timeline1"></div>
@@ -302,8 +297,6 @@ footer{text-align:center;padding:3rem 1rem;font-size:.72rem;color:var(--ink-fain
     <div class="day-heading"><span class="badge">DAY 2</span><span class="date">8/22（土）</span></div>
     <div class="timeline" data-day="2026-08-22" id="timeline2"></div>
   </div>
-
-  <div class="mark"><span class="mark-badge">GOAL</span></div>
 
   <footer>福島キャンプ 2026.8.21-8.22</footer>
 </div>
