@@ -16,7 +16,8 @@
 <style>
 :root{--ember:#C36F22;--ember-light:#FCEFD6;--ember-deep:#A85918;--ink:#3A2E22;--ink-light:#6B5A45;--ink-faint:#9C8A72;--warm-white:#FFF8EC;--warm-cream:#FCEFD6;--gold:#3F7A52;--gold-light:#DCEFDF;--transport:#8B6239;--food:#C36F22;--sight:#3F7A52;--hotel:#3D8C9C;--card-bg:#fff;--shadow-sm:0 1px 3px rgba(90,60,20,.08);--shadow-md:0 4px 16px rgba(90,60,20,.12);--radius:12px;--now-glow:rgba(63,122,82,.28);--pine:#3F7A52;--pine-deep:#2C5C3C;--wood:#8B6239}
 [data-theme="dark"]{--ink:#EFE6D6;--ink-light:#C9BBA3;--ink-faint:#8F8068;--warm-white:#211B14;--warm-cream:#2A2319;--card-bg:#2E2619;--transport:#C9A876;--food:#E8A868;--sight:#7FBE96;--hotel:#7FC4D2;--ember-light:#2A2013;--shadow-sm:0 1px 3px rgba(0,0,0,.25);--shadow-md:0 4px 16px rgba(0,0,0,.35);--now-glow:rgba(127,190,150,.18)}
-*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:clip}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}html{scroll-behavior:smooth;overflow-x:clip}
+img,a,button{-webkit-touch-callout:none;-webkit-user-select:none;user-select:none}
 body{font-family:'Zen Kaku Gothic New',sans-serif;background:var(--warm-white);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased;transition:background .4s,color .4s;overflow-x:clip;-webkit-touch-callout:none;-webkit-user-select:none;user-select:none}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important}.firefly-container{display:none!important}}
 *:focus-visible{outline:2px solid var(--ember);outline-offset:2px;border-radius:4px}
@@ -120,7 +121,7 @@ input,textarea{-webkit-user-select:text!important;user-select:text!important;-we
 .timeline{position:relative;padding-left:58px}
 .timeline::before{content:'';position:absolute;left:28px;top:6px;bottom:6px;width:1.5px;background:repeating-linear-gradient(180deg,var(--wood) 0 3px,transparent 3px 9px);opacity:.35}
 .duration-badge{position:relative;left:-58px;padding-left:58px;padding-bottom:.2rem;padding-top:.2rem}
-.duration-badge-inner{display:inline-flex;align-items:center;gap:.3rem;font-size:.7rem;color:var(--ink-faint);font-family:'Caveat',cursive;font-size:.95rem}
+.duration-badge-inner{display:inline-flex;align-items:center;gap:.3rem;font-size:.72rem;color:var(--ink-faint);font-family:'Zen Kaku Gothic New',sans-serif;letter-spacing:.02em}
 .timeline-item{position:relative;left:-58px;padding-left:58px;padding-bottom:2.2rem;opacity:0;transform:translateY(18px);transition:opacity .6s cubic-bezier(.22,1,.36,1),transform .6s cubic-bezier(.22,1,.36,1)}
 .timeline-item.visible{opacity:1;transform:translateY(0)}
 .timeline-item.now-here .timeline-dot{box-shadow:0 0 0 4px var(--now-glow),0 0 14px var(--now-glow)}
@@ -140,13 +141,8 @@ input,textarea{-webkit-user-select:text!important;user-select:text!important;-we
 .timeline-item:active .timeline-time{transform:scale(1.08) translateY(-1px);color:var(--ink)}
 .timeline-item:active .card-title{transform:translateX(3px)}
 .timeline-item:active .card-photo{transform:scale(1.035)}
-.card-header{display:flex;flex-direction:column;gap:.15rem;position:relative;z-index:2;margin-top:.5rem;transition:margin-top .3s}
-.card-title{font-size:1.05rem;font-weight:700;font-family:'Zen Old Mincho',serif;order:2;transition:transform .2s,color .2s}
-.card-category{font-family:'Caveat',cursive;font-size:1.05rem;font-weight:600;letter-spacing:.04em;white-space:nowrap;order:1;display:inline-flex;align-items:center;gap:.3rem;transition:color .2s,text-shadow .2s}
-.card-category.transport{color:var(--transport)}
-.card-category.food{color:var(--food)}
-.card-category.sight{color:var(--sight)}
-.card-category.hotel{color:var(--hotel)}
+.card-header{position:relative;z-index:2;margin-top:.5rem;transition:margin-top .3s}
+.card-title{font-size:1.05rem;font-weight:700;font-family:'Zen Old Mincho',serif;transition:transform .2s,color .2s}
 .card-detail{font-size:.8rem;color:var(--ink-light);margin-top:.5rem;line-height:1.75}
 .card-bottom{display:flex;align-items:center;gap:.8rem;margin-top:.7rem;flex-wrap:wrap}
 .card-link{font-size:.7rem;color:var(--transport);text-decoration:none;padding:.15rem 0;border-bottom:1px solid rgba(139,98,57,.35)}
@@ -154,9 +150,9 @@ input,textarea{-webkit-user-select:text!important;user-select:text!important;-we
 .card-cost-input{width:70px;border:none;border-bottom:1px dashed rgba(128,128,128,.3);padding:.2rem .1rem;font-size:.78rem;font-family:inherit;text-align:right;background:none;color:var(--ink)}
 .card-photo-wrap{position:relative;width:94%;max-width:460px;aspect-ratio:1/1;margin:.6rem 0 0 0;overflow:visible;display:none}
 .card-photo-wrap.has-photo{display:block}
-.card-photo{width:100%;height:100%;object-fit:cover;border-radius:46% 54% 55% 45% / 55% 45% 55% 45%;-webkit-mask-image:radial-gradient(ellipse 76% 76% at 50% 50%,#000 60%,transparent 100%);mask-image:radial-gradient(ellipse 76% 76% at 50% 50%,#000 60%,transparent 100%);filter:drop-shadow(0 14px 24px rgba(90,60,20,.22));transition:transform .25s}
+.card-photo-glow{position:absolute;inset:-14%;object-fit:cover;width:128%;height:128%;border-radius:50%;filter:blur(26px) saturate(1.15);opacity:.55;z-index:0}
+.card-photo{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;border-radius:46% 54% 55% 45% / 55% 45% 55% 45%;-webkit-mask-image:radial-gradient(ellipse 68% 68% at 50% 50%,#000 30%,transparent 96%);mask-image:radial-gradient(ellipse 68% 68% at 50% 50%,#000 30%,transparent 96%);transition:transform .25s}
 .card-photo-wrap.has-photo + .card-header{margin-top:-3.6rem;padding:0 .3rem}
-.card-photo-wrap.has-photo + .card-header .card-category{color:rgba(255,255,255,.95);text-shadow:0 2px 8px rgba(0,0,0,.6),0 1px 3px rgba(0,0,0,.5)}
 .card-photo-wrap.has-photo + .card-header .card-title{color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.65),0 1px 4px rgba(0,0,0,.6)}
 .photo-btn{display:inline-flex;align-items:center;gap:.3rem;font-size:.68rem;color:var(--ink-faint);border:1px dashed rgba(139,98,57,.35);border-radius:6px;padding:.2rem .6rem;cursor:pointer;background:none;font-family:inherit}
 .photo-input{display:none}
@@ -563,8 +559,8 @@ function renderDay(dayKey, elId){
       '<div class="timeline-time-col"><div class="timeline-time">' + it.time + '</div><div class="timeline-dot ' + it.cat + '">' + CAT_ICON[it.cat] + '</div></div>' +
       '<span class="now-label">📍 NOW</span>' +
       '<div class="timeline-card ' + it.cat + '">' +
-        '<div class="card-photo-wrap" id="photowrap-' + key + '"><img class="card-photo" id="photo-' + key + '"></div>' +
-        '<div class="card-header"><span class="card-category ' + it.cat + '">' + CAT_LABEL[it.cat] + '</span><div class="card-title">' + it.title + '</div></div>' +
+        '<div class="card-photo-wrap" id="photowrap-' + key + '"><img class="card-photo-glow" id="photoglow-' + key + '" aria-hidden="true"><img class="card-photo" id="photo-' + key + '"></div>' +
+        '<div class="card-header"><div class="card-title">' + it.title + '</div></div>' +
         (it.detail ? '<div class="card-detail">' + it.detail + '</div>' : '') +
         '<div class="card-bottom">' +
           mapLink +
@@ -616,12 +612,13 @@ document.querySelectorAll('.photo-input').forEach(function(input){
   const key = input.dataset.key;
   const wrap = document.getElementById('photowrap-' + key);
   const img = document.getElementById('photo-' + key);
+  const glow = document.getElementById('photoglow-' + key);
   try{
     const saved = localStorage.getItem('fukushima-photo-' + key);
-    if(saved){ img.src = saved; wrap.classList.add('has-photo'); }
-    else if(PRESET_PHOTOS[key]){ img.src = PRESET_PHOTOS[key]; wrap.classList.add('has-photo'); }
+    if(saved){ img.src = saved; if(glow) glow.src = saved; wrap.classList.add('has-photo'); }
+    else if(PRESET_PHOTOS[key]){ img.src = PRESET_PHOTOS[key]; if(glow) glow.src = PRESET_PHOTOS[key]; wrap.classList.add('has-photo'); }
   }catch(e){
-    if(PRESET_PHOTOS[key]){ img.src = PRESET_PHOTOS[key]; wrap.classList.add('has-photo'); }
+    if(PRESET_PHOTOS[key]){ img.src = PRESET_PHOTOS[key]; if(glow) glow.src = PRESET_PHOTOS[key]; wrap.classList.add('has-photo'); }
   }
   input.addEventListener('change', function(e){
     const file = e.target.files[0];
@@ -638,7 +635,7 @@ document.querySelectorAll('.photo-input').forEach(function(input){
         canvas.width = w; canvas.height = h;
         canvas.getContext('2d').drawImage(image, 0, 0, w, h);
         const dataUrl = canvas.toDataURL('image/jpeg', 0.72);
-        img.src = dataUrl; wrap.classList.add('has-photo');
+        img.src = dataUrl; if(glow) glow.src = dataUrl; wrap.classList.add('has-photo');
         try{ localStorage.setItem('fukushima-photo-' + key, dataUrl); }
         catch(err){ alert('保存容量オーバーです。別の写真をお試しください。'); }
       };
@@ -719,7 +716,7 @@ function buildStorySlides(){
   const wraps = document.querySelectorAll('.card-photo-wrap.has-photo');
   const slides = [];
   wraps.forEach(function(wrap){
-    const img = wrap.querySelector('img');
+    const img = wrap.querySelector('img.card-photo');
     const item = wrap.closest('.timeline-item');
     if(!img || !img.src || !item) return;
     const titleEl = item.querySelector('.card-title');
