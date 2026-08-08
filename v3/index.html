@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>福島キャンプのしおり 2026.8.21-8.22</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1478C4">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="福島キャンプ">
+<link rel="icon" type="image/png" sizes="32x32" href="img/icon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Old+Mincho:wght@400;700&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--ember:#C36F22;--ember-light:#FCEFD6;--ember-deep:#A85918;--ink:#3A2E22;--ink-light:#6B5A45;--ink-faint:#9C8A72;--warm-white:#FFF8EC;--warm-cream:#FCEFD6;--gold:#3F7A52;--gold-light:#DCEFDF;--transport:#8B6239;--food:#C36F22;--sight:#3F7A52;--hotel:#3D8C9C;--card-bg:#fff;--shadow-sm:0 1px 3px rgba(90,60,20,.08);--shadow-md:0 4px 16px rgba(90,60,20,.12);--radius:12px;--now-glow:rgba(63,122,82,.28);--pine:#3F7A52;--pine-deep:#2C5C3C;--wood:#8B6239}
+[data-theme="dark"]{--ink:#EFE6D6;--ink-light:#C9BBA3;--ink-faint:#8F8068;--warm-white:#211B14;--warm-cream:#2A2319;--card-bg:#2E2619;--transport:#C9A876;--food:#E8A868;--sight:#7FBE96;--hotel:#7FC4D2;--ember-light:#2A2013;--shadow-sm:0 1px 3px rgba(0,0,0,.25);--shadow-md:0 4px 16px rgba(0,0,0,.35);--now-glow:rgba(127,190,150,.18)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:'Zen Kaku Gothic New',sans-serif;background:var(--warm-white);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased;transition:background .4s,color .4s;overflow-x:clip;-webkit-touch-callout:none;-webkit-user-select:none;user-select:none}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important}.firefly-container{display:none!important}}
+*:focus-visible{outline:2px solid var(--ember);outline-offset:2px;border-radius:4px}
+input,textarea{-webkit-user-select:text!important;user-select:text!important;-webkit-touch-callout:default!important}
+.firefly-container{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:9999}
+.firefly{position:absolute;bottom:-10px;width:var(--fsize,6px);height:var(--fsize,6px);background:radial-gradient(circle,#FFF6D8 0%,#FFE9B0 45%,#F3C56A 80%);box-shadow:0 0 8px 2px rgba(255,220,130,.7);opacity:0;animation:flyUp linear forwards,flicker 1.6s ease-in-out infinite;pointer-events:none;clip-path:polygon(50% 0%,58% 32%,85% 15%,68% 42%,100% 50%,68% 58%,85% 85%,58% 68%,50% 100%,42% 68%,15% 85%,32% 58%,0% 50%,32% 42%,15% 15%,42% 32%)}
+@keyframes flyUp{0%{opacity:0;transform:translate(0,0)}12%{opacity:.9}80%{opacity:.8}100%{opacity:0;transform:translate(var(--drift,20px),-105vh)}}
+@keyframes flicker{0%,100%{filter:brightness(.65)}50%{filter:brightness(1.25)}}
+.sparkle{position:absolute;bottom:-10px;background:linear-gradient(180deg,#FFF3C4 0%,#FFAA3D 45%,#E8531F 100%);box-shadow:0 0 6px 1px rgba(255,110,30,.6);opacity:0;animation:emberRise linear forwards,emberFlicker .5s ease-in-out infinite;pointer-events:none;clip-path:polygon(50% 0%,75% 30%,90% 60%,75% 100%,25% 100%,10% 60%,25% 30%)}
+@keyframes emberRise{0%{opacity:0;transform:translate(0,0)}15%{opacity:1}55%{opacity:.75}100%{opacity:0;transform:translate(var(--drift,15px),-60vh)}}
+@keyframes emberFlicker{0%,100%{filter:brightness(.85)}50%{filter:brightness(1.3)}}
+.hero{position:relative;min-height:92vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#3F7A52}
+.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center 68%;transition:opacity 1s ease}
+.hero-bg-light{background-image:linear-gradient(180deg,rgba(20,60,30,.18),rgba(20,40,25,.45)),url('img/hero-day.jpg');opacity:1}
+.hero-bg-dark{background-image:linear-gradient(180deg,rgba(10,14,20,.25),rgba(8,10,16,.55)),url('img/hero-night.jpg');opacity:0}
+[data-theme="dark"] .hero-bg-light{opacity:0}
+[data-theme="dark"] .hero-bg-dark{opacity:1}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 20% 15%,rgba(255,255,255,.35) 0%,transparent 40%),radial-gradient(ellipse at 80% 10%,rgba(255,255,255,.25) 0%,transparent 35%);transition:opacity .6s}
+[data-theme="dark"] .hero::before{background:radial-gradient(ellipse at 25% 60%,rgba(232,147,90,.18) 0%,transparent 55%),radial-gradient(ellipse at 75% 25%,rgba(126,155,94,.18) 0%,transparent 50%)}
+.hero-content{position:relative;z-index:2;text-align:center;padding:2rem}
+.hero-label{font-family:'Caveat',cursive;color:var(--ember);font-size:1.3rem;letter-spacing:.15em;margin-bottom:1rem;opacity:0;animation:fadeUp .8s ease-out .3s forwards;text-shadow:0 2px 10px rgba(0,0,0,.45),0 1px 2px rgba(0,0,0,.5)}
+.hero-ribbon{position:relative;display:inline-block;margin:0 auto;padding:1.1rem 2.4rem;opacity:0;animation:fadeUp .8s ease-out .5s forwards}
+.hero-ribbon::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,var(--pine-deep),var(--pine));clip-path:polygon(2.5% 0%,97.5% 0%,100% 20%,100% 80%,97.5% 100%,2.5% 100%,0% 80%,0% 20%);box-shadow:0 10px 26px rgba(0,0,0,.3);z-index:-1}
+.hero-ribbon::after{content:'';position:absolute;left:6px;right:6px;top:6px;bottom:6px;border:1.5px solid rgba(253,247,232,.4);clip-path:polygon(2.5% 0%,97.5% 0%,100% 20%,100% 80%,97.5% 100%,2.5% 100%,0% 80%,0% 20%);z-index:-1}
+.hero-title{font-family:'Zen Old Mincho',serif;font-size:clamp(2.4rem,7vw,4.2rem);color:#FAF8F3;letter-spacing:.15em;text-shadow:0 4px 20px rgba(0,0,0,.5),0 2px 6px rgba(0,0,0,.55)}
+.hero-dates{font-size:1rem;color:var(--gold-light);letter-spacing:.25em;margin-bottom:2.5rem;opacity:0;animation:fadeUp .8s ease-out .7s forwards;text-shadow:0 2px 8px rgba(0,0,0,.5),0 1px 2px rgba(0,0,0,.55)}
+.hero-divider{width:60px;height:1px;background:var(--ember);margin:0 auto 2rem;opacity:0;animation:fadeUp .8s ease-out .6s forwards;box-shadow:0 1px 6px rgba(0,0,0,.4)}
+.hero-meta{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;opacity:0;animation:fadeUp .8s ease-out .9s forwards}
+.hero-meta-item{color:rgba(250,248,243,.75);font-size:.85rem;letter-spacing:.08em;text-shadow:0 1px 6px rgba(0,0,0,.5),0 1px 2px rgba(0,0,0,.55)}
+.hero-meta-item span{color:#FAF8F3;font-weight:500;text-shadow:0 1px 6px rgba(0,0,0,.5),0 1px 2px rgba(0,0,0,.55)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.scroll-hint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);color:rgba(250,248,243,.5);font-size:.72rem;letter-spacing:.2em;z-index:2;text-shadow:0 1px 6px rgba(0,0,0,.5)}
+
+.day-nav{position:sticky;top:0;z-index:100;background:rgba(250,248,243,.93);backdrop-filter:blur(20px);border-bottom:1px solid rgba(30,26,20,.06);transition:box-shadow .3s,background .4s}
+[data-theme="dark"] .day-nav{background:rgba(24,22,17,.93);border-bottom-color:rgba(255,255,255,.06)}
+.day-nav.scrolled{box-shadow:var(--shadow-sm)}
+.day-nav-inner{max-width:760px;margin:0 auto;display:flex;align-items:center;padding:0 1rem;overflow:hidden}
+.nav-brand{font-family:'Zen Old Mincho',serif;font-size:.95rem;color:var(--ink);letter-spacing:.12em;padding:1rem 1rem 1rem 0;border-right:1px solid rgba(128,128,128,.15);white-space:nowrap;cursor:pointer;background:none;border-top:none;border-bottom:none;border-left:none}
+.nav-days{display:flex;flex:1;justify-content:center;min-width:0}
+.nav-day-btn{background:none;border:none;padding:1rem 1.2rem;font-size:.82rem;color:var(--ink-faint);cursor:pointer;position:relative;transition:color .3s;letter-spacing:.04em}
+.nav-day-btn.active{color:var(--ink)}
+.nav-day-btn.active::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:20px;height:2px;background:var(--ember);border-radius:1px}
+.nav-actions{display:flex;gap:.4rem;align-items:center;flex-shrink:0}
+.nav-icon-btn{background:none;border:1px solid rgba(128,128,128,.15);width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:.9rem;display:flex;align-items:center;justify-content:center;transition:all .15s;color:var(--ink-light);-webkit-tap-highlight-color:transparent}
+.nav-icon-btn:active{background:var(--ink);color:var(--warm-white);border-color:var(--ink)}
+
+.content-section{max-width:760px;margin:0 auto;padding:0 1.4rem;overflow-x:hidden}
+.info-card,.checklist-card,.memo-card,.weather-card{background:var(--warm-cream);border-radius:var(--radius);padding:1.8rem;margin:1rem 0;transition:filter .25s,box-shadow .25s,transform .25s;-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none;-webkit-user-select:none;user-select:none}
+.info-card:active,.checklist-card:active,.memo-card:active,.weather-card:active{filter:brightness(.96) saturate(1.15);box-shadow:var(--shadow-md);transform:translateY(-5px)}
+.countdown-card{background:linear-gradient(135deg,var(--ember-light),rgba(126,155,94,.1));border-radius:var(--radius);padding:1.5rem 2rem;margin:3rem 0 1rem;text-align:center;transition:filter .25s,box-shadow .25s,transform .25s;-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none;-webkit-user-select:none;user-select:none}
+.countdown-card:active{filter:brightness(.96) saturate(1.15);box-shadow:var(--shadow-md);transform:translateY(-5px)}
+.countdown-title{font-size:.8rem;color:var(--ink-faint);letter-spacing:.1em;margin-bottom:.3rem}
+.countdown-display{font-family:'Zen Old Mincho',serif;font-size:1.7rem;font-weight:700;color:var(--ember-deep);letter-spacing:.05em}
+.countdown-sub{font-size:.75rem;color:var(--ink-faint);margin-top:.2rem}
+.info-card{margin-top:1rem}
+.info-card-title{font-family:'Zen Old Mincho',serif;font-size:1rem;margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
+
+.weather-days{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem;margin-top:.8rem}
+.weather-day{background:var(--card-bg);border-radius:10px;padding:.9rem;text-align:center;transition:background .4s}
+.weather-day-label{font-size:.72rem;color:var(--ink-faint);margin-bottom:.3rem;font-weight:500}
+.weather-day-icon{font-size:1.8rem;margin:.2rem 0}
+.weather-day-temp{font-family:'Zen Old Mincho',serif;font-size:1rem;font-weight:700}
+.weather-day-temp-min{font-size:.8rem;color:var(--ink-faint);font-weight:400}
+.weather-day-detail{font-size:.7rem;color:var(--ink-light);margin-top:.3rem}
+.weather-note{font-size:.68rem;color:var(--ink-faint);margin-top:.6rem;text-align:right}
+.weather-error{font-size:.8rem;color:var(--ink-faint);text-align:center;padding:.5rem}
+.weather-history{margin-top:1rem;padding-top:.9rem;border-top:1px dashed rgba(128,128,128,.2)}
+.weather-history-title{font-size:.78rem;font-weight:700;color:var(--ink-light);margin-bottom:.5rem}
+.weather-history-body{display:grid;grid-template-columns:1fr 1fr;gap:.3rem .8rem}
+.weather-history-row{display:flex;justify-content:space-between;align-items:center;font-size:.78rem;padding:.35rem .6rem;background:var(--card-bg);border-radius:6px}
+.weather-history-label{color:var(--ink-faint);font-size:.7rem}
+.weather-history-value{font-weight:600;color:var(--ink);font-size:.78rem}
+
+.checklist-columns{display:grid;grid-template-columns:1fr 1fr;gap:.3rem 2rem}
+.check-item{display:flex;align-items:center;gap:.6rem;padding:.35rem 0;font-size:.85rem;cursor:pointer;user-select:none;transition:opacity .3s}
+.check-item.checked{opacity:.45;text-decoration:line-through}
+.check-box{width:18px;height:18px;border:2px solid var(--ink-faint);border-radius:4px;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .2s;font-size:.7rem;color:transparent}
+.check-item.checked .check-box{background:var(--ember);border-color:var(--ember);color:#fff}
+.checklist-progress{margin-top:1rem;display:flex;align-items:center;gap:.8rem}
+.add-item-row{display:flex;gap:.5rem;margin-top:.8rem}
+.add-item-input{flex:1;min-width:0;border:1px dashed rgba(128,128,128,.3);border-radius:8px;padding:.5rem .8rem;font-family:'Zen Kaku Gothic New',sans-serif;font-size:.82rem;background:var(--card-bg);color:var(--ink);outline:none;transition:border-color .3s}
+.add-item-input:focus{border-color:var(--ember);outline:2px solid rgba(245,166,35,.25);outline-offset:1px}
+.add-item-input::placeholder{color:var(--ink-faint)}
+.add-item-btn{flex-shrink:0;background:var(--ember);color:#fff;border:none;border-radius:8px;padding:.5rem 1rem;font-size:.8rem;cursor:pointer;font-family:inherit;white-space:nowrap;transition:opacity .2s}
+.add-item-btn:active{opacity:.85}
+.check-item-remove{margin-left:auto;background:none;border:none;color:var(--ink-faint);font-size:1rem;cursor:pointer;padding:0 .2rem;line-height:1}
+.check-item-remove:active{color:var(--ember-deep)}
+.progress-bar{flex:1;height:4px;background:rgba(128,128,128,.15);border-radius:2px;overflow:hidden}
+.progress-fill{height:100%;background:var(--ember);border-radius:2px;transition:width .4s;width:0}
+.progress-text{font-size:.75rem;color:var(--ink-faint);white-space:nowrap}
+
+.memo-textarea{width:100%;min-height:80px;border:1px dashed rgba(128,128,128,.25);border-radius:8px;padding:.8rem 1rem;font-family:'Zen Kaku Gothic New',sans-serif;font-size:.85rem;line-height:1.8;background:var(--card-bg);color:var(--ink);resize:vertical;transition:border-color .3s,background .4s;-webkit-user-select:text;user-select:text;-webkit-touch-callout:default}
+.memo-textarea:focus{border-color:var(--ember);outline:2px solid rgba(232,147,90,.3);outline-offset:1px}
+
+.mark{position:relative;display:flex;justify-content:center;align-items:center;gap:.8rem;margin:2.2rem 0 .4rem}
+.mark::before,.mark::after{content:'';width:34px;height:1px;background:var(--wood);opacity:.4}
+.mark-badge{color:var(--pine-deep);font-family:'Caveat',cursive;font-weight:700;font-size:1.3rem;letter-spacing:.15em}
+.day-section{padding-top:1.4rem}
+.day-heading{display:flex;align-items:baseline;gap:.8rem;margin-bottom:1.6rem}
+.day-heading .badge{font-family:'Zen Old Mincho',serif;background:var(--ink);color:var(--warm-white);font-size:.8rem;padding:.25rem .8rem;border-radius:12px}
+.day-heading .date{font-size:.95rem;color:var(--ink-light)}
+
+.timeline{position:relative;padding-left:58px}
+.timeline::before{content:'';position:absolute;left:28px;top:6px;bottom:6px;width:1.5px;background:repeating-linear-gradient(180deg,var(--wood) 0 3px,transparent 3px 9px);opacity:.35}
+.duration-badge{position:relative;left:-58px;padding-left:58px;padding-bottom:.2rem;padding-top:.2rem}
+.duration-badge-inner{display:inline-flex;align-items:center;gap:.3rem;font-size:.7rem;color:var(--ink-faint);font-family:'Caveat',cursive;font-size:.95rem}
+.timeline-item{position:relative;left:-58px;padding-left:58px;padding-bottom:2.2rem;opacity:0;transform:translateY(18px);transition:opacity .6s cubic-bezier(.22,1,.36,1),transform .6s cubic-bezier(.22,1,.36,1)}
+.timeline-item.visible{opacity:1;transform:translateY(0)}
+.timeline-item.now-here .timeline-dot{box-shadow:0 0 0 4px var(--now-glow),0 0 14px var(--now-glow)}
+.timeline-item.now-here .card-title{color:var(--ember-deep)}
+.now-label{display:none;position:absolute;left:58px;top:-1.1rem;font-size:.68rem;color:var(--ember-deep);font-weight:700}
+.timeline-item.now-here .now-label{display:block}
+.timeline-time-col{position:absolute;left:0;top:0;width:56px;display:flex;flex-direction:column;align-items:center;gap:.35rem}
+.timeline-time{font-size:.66rem;color:var(--ink-faint);font-weight:700;white-space:nowrap;font-family:'Zen Old Mincho',serif}
+.timeline-dot{width:24px;height:24px;border-radius:50%;background:var(--ink-faint);border:3px solid var(--warm-white);z-index:1;display:flex;align-items:center;justify-content:center;font-size:.72rem;box-shadow:0 1px 4px rgba(0,0,0,.15)}
+.timeline-dot.transport{background:var(--transport)}
+.timeline-dot.food{background:var(--food)}
+.timeline-dot.sight{background:var(--sight)}
+.timeline-dot.hotel{background:var(--hotel)}
+.timeline-card{background:none;border:none;box-shadow:none;padding:0;cursor:default}
+.timeline-item{-webkit-touch-callout:none;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+.card-header{display:flex;flex-direction:column;gap:.15rem}
+.card-title{font-size:1.02rem;font-weight:700;font-family:'Zen Old Mincho',serif;order:2}
+.card-category{font-family:'Caveat',cursive;font-size:1rem;font-weight:600;letter-spacing:.04em;white-space:nowrap;order:1;display:inline-flex;align-items:center;gap:.3rem}
+.card-category.transport{color:var(--transport)}
+.card-category.food{color:var(--food)}
+.card-category.sight{color:var(--sight)}
+.card-category.hotel{color:var(--hotel)}
+.card-cat-icon{width:20px;height:20px;object-fit:contain;filter:drop-shadow(0 1px 1px rgba(0,0,0,.15))}
+.card-detail{font-size:.8rem;color:var(--ink-light);margin-top:.5rem;line-height:1.75}
+.card-bottom{display:flex;align-items:center;gap:.8rem;margin-top:.7rem;flex-wrap:wrap}
+.card-link{font-size:.7rem;color:var(--transport);text-decoration:none;padding:.15rem 0;border-bottom:1px solid rgba(139,98,57,.35)}
+.card-cost-wrap{display:flex;align-items:center;gap:.3rem;font-size:.75rem;color:var(--ink-faint)}
+.card-cost-input{width:70px;border:none;border-bottom:1px dashed rgba(128,128,128,.3);padding:.2rem .1rem;font-size:.78rem;font-family:inherit;text-align:right;background:none;color:var(--ink)}
+.card-photo-wrap{position:relative;width:90%;max-width:420px;aspect-ratio:4/3;margin:1rem auto .3rem 0;overflow:visible;display:none}
+.card-photo-wrap.has-photo{display:block}
+.card-photo{width:100%;height:100%;object-fit:cover;border-radius:46% 54% 55% 45% / 55% 45% 55% 45%;-webkit-mask-image:radial-gradient(ellipse 74% 74% at 50% 50%,#000 58%,transparent 100%);mask-image:radial-gradient(ellipse 74% 74% at 50% 50%,#000 58%,transparent 100%);filter:drop-shadow(0 10px 20px rgba(90,60,20,.18))}
+.photo-btn{display:inline-flex;align-items:center;gap:.3rem;font-size:.68rem;color:var(--ink-faint);border:1px dashed rgba(139,98,57,.35);border-radius:6px;padding:.2rem .6rem;cursor:pointer;background:none;font-family:inherit}
+.photo-input{display:none}
+
+.modal-overlay{position:fixed;inset:0;background:rgba(20,18,14,.45);display:none;align-items:center;justify-content:center;z-index:200;padding:20px}
+.modal-overlay.open{display:flex}
+.modal{background:var(--card-bg);border-radius:16px;padding:1.6rem;max-width:420px;width:100%;max-height:80vh;overflow-y:auto;color:var(--ink)}
+.modal h2{font-size:1.05rem;margin-bottom:1rem;font-family:'Zen Old Mincho',serif}
+.modal .day-sum{display:flex;justify-content:space-between;font-size:.9rem;padding:.5rem 0;border-bottom:1px solid rgba(128,128,128,.15)}
+.modal .total{display:flex;justify-content:space-between;font-size:1.05rem;font-weight:700;margin-top:1rem;padding-top:1rem;border-top:2px solid var(--ink)}
+.modal-close{margin-top:1.2rem;width:100%;padding:.7rem;border:none;border-radius:10px;background:var(--ember);color:#fff;font-weight:700;cursor:pointer;font-family:inherit}
+.modal-title{font-family:'Zen Old Mincho',serif;font-size:1.1rem;margin-bottom:1rem;display:flex;align-items:center;justify-content:space-between}
+.modal-x{background:none;border:none;font-size:1.5rem;color:var(--ink-faint);cursor:pointer;padding:.3rem;line-height:1}
+.help-modal-body{padding:.3rem 0;font-size:.85rem;line-height:1.85;color:var(--ink)}
+.help-modal-body h2{font-family:'Zen Old Mincho',serif;font-size:1rem;font-weight:700;margin:1.5rem 0 .5rem;padding-bottom:.4rem;border-bottom:1px solid rgba(128,128,128,.15)}
+.help-modal-body h2:first-child{margin-top:0}
+.help-modal-body p{margin:.4rem 0;font-size:.83rem;color:var(--ink-light)}
+.help-modal-body ul{margin:.4rem 0 .4rem 1.2rem;font-size:.83rem;color:var(--ink-light)}
+.help-modal-body li{margin:.25rem 0}
+.help-modal-body strong{color:var(--ink);font-weight:600}
+.help-table{width:100%;border-collapse:collapse;margin:.5rem 0;font-size:.8rem}
+.help-table th,.help-table td{padding:.4rem .5rem;text-align:left;border-bottom:1px solid rgba(128,128,128,.1)}
+.help-table th{font-weight:600;background:var(--warm-cream);font-size:.72rem}
+
+footer{text-align:center;padding:3rem 1rem;font-size:.72rem;color:var(--ink-faint)}
+.story-overlay{position:fixed;inset:0;background:#0A0A0A;z-index:400;display:none;flex-direction:column}
+.story-overlay.open{display:flex}
+.story-top{position:absolute;top:0;left:0;right:0;z-index:2;display:flex;align-items:center;gap:8px;padding:calc(.7rem + env(safe-area-inset-top,0px)) 1rem .7rem}
+.story-dots{flex:1;display:flex;gap:4px}
+.story-dot{flex:1;height:3px;border-radius:2px;background:rgba(255,255,255,.3)}
+.story-dot.filled{background:rgba(255,255,255,.95)}
+.story-close{background:rgba(0,0,0,.35);border:none;color:#fff;width:32px;height:32px;border-radius:50%;font-size:1.3rem;line-height:1;cursor:pointer;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.story-stage{flex:1;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;cursor:pointer;user-select:none}
+.story-img{max-width:100%;max-height:100%;object-fit:contain;pointer-events:none}
+.story-caption{position:absolute;left:0;right:0;bottom:0;padding:2.2rem 1.4rem calc(1.4rem + env(safe-area-inset-bottom,0px));background:linear-gradient(0deg,rgba(0,0,0,.75),transparent);color:#fff;text-align:left}
+.story-cat{display:inline-block;font-size:.68rem;font-weight:700;padding:.2rem .6rem;border-radius:10px;background:rgba(255,255,255,.2);margin-bottom:.4rem}
+.story-title{font-family:'Zen Old Mincho',serif;font-size:1.15rem;margin-bottom:.2rem}
+.story-time{font-size:.78rem;opacity:.75}
+.back-to-top{position:fixed;bottom:1.5rem;right:1.5rem;width:42px;height:42px;background:var(--ink);color:var(--warm-white);border:none;border-radius:50%;font-size:1.1rem;cursor:pointer;z-index:90;opacity:0;transform:translateY(10px);transition:all .3s;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-md)}
+.back-to-top.visible{opacity:1;transform:translateY(0)}
+.back-to-top:active{background:var(--ember)}
+[data-theme="dark"] .back-to-top{background:#F5EFE0;color:#1B1710}
+[data-theme="dark"] .back-to-top:active{background:var(--ember);color:#fff}
+
+@media(max-width:640px){
+.hero{min-height:56vh}
+.hero-content{padding:1.2rem}
+.hero-label{font-size:1.05rem;margin-bottom:.5rem}
+.hero-title{font-size:clamp(2.3rem,13vw,3.2rem);margin-bottom:.3rem}
+.hero-divider{margin:0 auto 1rem}
+.hero-dates{font-size:.85rem;letter-spacing:.15em;margin-bottom:1.2rem}
+.hero-meta{gap:1.2rem}
+.hero-meta-item{font-size:.75rem}
+.scroll-hint{bottom:1rem;font-size:.65rem}
+.nav-brand{display:none}
+.day-nav-inner{padding:0 .4rem}
+.nav-days{justify-content:flex-start;gap:0}
+.nav-day-btn{padding:.9rem .35rem;font-size:.68rem}
+.nav-actions{gap:.1rem}
+.nav-icon-btn{width:34px;height:34px;font-size:.85rem;flex-shrink:0}
+.card-cost-input,.add-item-input,.memo-textarea{font-size:16px}
+.photo-btn{padding:.4rem .7rem}
+.card-link{padding:.35rem .7rem}
+.check-item-remove{padding:.5rem .6rem;margin-right:-.5rem}
+.story-close{width:40px;height:40px;font-size:1.5rem}
+.story-dot{height:4px}
+}
+
+</style>
+</head>
+<body>
+
+<div class="firefly-container" id="fireflyContainer"></div>
+<section class="hero">
+  <div class="hero-bg hero-bg-light"></div>
+  <div class="hero-bg hero-bg-dark"></div>
+  <div class="hero-content">
+    <div class="hero-label">My Camp Journal</div>
+    <div class="hero-ribbon"><div class="hero-title">福島キャンプ</div></div>
+    <div class="hero-divider"></div>
+    <div class="hero-dates">2026.8.21 ー 8.22　1泊2日</div>
+    <div class="hero-meta">
+      <div class="hero-meta-item">宿泊 <span>アルモ ハルモニア</span></div>
+      <div class="hero-meta-item">出発 <span>自宅</span></div>
+    </div>
+  </div>
+  <div class="scroll-hint">SCROLL</div>
+</section>
+
+<nav class="day-nav" id="dayNav">
+  <div class="day-nav-inner">
+    <button class="nav-brand" id="navBrand">福島キャンプ</button>
+    <div class="nav-days">
+      <button class="nav-day-btn active" data-target="day1">DAY 1 · 8/21</button>
+      <button class="nav-day-btn" data-target="day2">DAY 2 · 8/22</button>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-icon-btn" id="storyBtn" title="写真スライドショー">▶️</button>
+      <button class="nav-icon-btn" id="costBtn" title="費用管理">💰</button>
+      <button class="nav-icon-btn" id="shareBtn" title="共有">📤</button>
+      <button class="nav-icon-btn" id="helpBtn" title="使い方ガイド" style="font-family:'Zen Old Mincho',serif;font-weight:700">?</button>
+      <button class="nav-icon-btn" id="themeBtn" title="テーマ切替">🌙</button>
+    </div>
+  </div>
+</nav>
+
+<div class="content-section">
+
+  <div class="countdown-card" ontouchstart="">
+    <div class="countdown-title" id="countdownTitle">出発まで</div>
+    <div class="countdown-display" id="countdownDisplay">計算中...</div>
+    <div class="countdown-sub" id="countdownSub"></div>
+  </div>
+
+  <div class="info-card checklist-card" ontouchstart="">
+    <div class="info-card-title">✅ 持ち物チェックリスト</div>
+    <div class="checklist-columns" id="checklist"></div>
+    <div class="add-item-row">
+      <input type="text" class="add-item-input" id="addItemInput" placeholder="持ち物を追加（例：モバイルバッテリー）">
+      <button class="add-item-btn" id="addItemBtn">＋ 追加</button>
+    </div>
+    <div class="checklist-progress">
+      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+      <div class="progress-text" id="progressText">0/9</div>
+    </div>
+  </div>
+
+  <div class="weather-card" ontouchstart="">
+    <div class="info-card-title">🌤 天気予報</div>
+    <div class="weather-days" id="weatherDays"><div class="weather-error">読み込み中...</div></div>
+    <div class="weather-note" id="weatherNote"></div>
+    <div class="weather-history" id="weatherHistory" style="display:none">
+      <div class="weather-history-title">📊 8月中旬の平年値（白河）</div>
+      <div class="weather-history-body">
+        <div class="weather-history-row"><span class="weather-history-label">最高気温</span><span class="weather-history-value">29℃前後</span></div>
+        <div class="weather-history-row"><span class="weather-history-label">最低気温</span><span class="weather-history-value">20℃前後</span></div>
+        <div class="weather-history-row"><span class="weather-history-label">降水確率目安</span><span class="weather-history-value">約42%</span></div>
+        <div class="weather-history-row"><span class="weather-history-label">服装の目安</span><span class="weather-history-value">半袖＋羽織り物</span></div>
+      </div>
+      <div class="weather-note">気象庁 白河 平年値（1991-2020）· 降水確率は1mm以上の降水日数から算出</div>
+    </div>
+  </div>
+
+  <div class="memo-card" ontouchstart="">
+    <div class="info-card-title">📝 メモ</div>
+    <textarea class="memo-textarea" id="memoText" placeholder="持ち物や現地メモを自由に書けます"></textarea>
+  </div>
+
+  <div class="mark"><span class="mark-badge">START</span></div>
+
+  <div class="day-section" id="day1">
+    <div class="day-heading"><span class="badge">DAY 1</span><span class="date">8/21（金）</span></div>
+    <div class="timeline" data-day="2026-08-21" id="timeline1"></div>
+  </div>
+
+  <div class="day-section" id="day2">
+    <div class="day-heading"><span class="badge">DAY 2</span><span class="date">8/22（土）</span></div>
+    <div class="timeline" data-day="2026-08-22" id="timeline2"></div>
+  </div>
+
+  <div class="mark"><span class="mark-badge">GOAL</span></div>
+
+  <footer>福島キャンプ 2026.8.21-8.22</footer>
+</div>
+
+<button class="back-to-top" id="backToTop">↑</button>
+
+<div class="modal-overlay" id="costModal">
+  <div class="modal">
+    <h2>💰 費用管理</h2>
+    <div class="day-sum"><span>DAY 1 小計</span><span id="sum1">¥0</span></div>
+    <div class="day-sum"><span>DAY 2 小計</span><span id="sum2">¥0</span></div>
+    <div class="total"><span>合計</span><span id="sumTotal">¥0</span></div>
+    <button class="modal-close" id="costModalClose">閉じる</button>
+  </div>
+</div>
+
+<div class="modal-overlay" id="helpModal">
+  <div class="modal" style="max-width:560px;max-height:82vh">
+    <div class="modal-title"><span>❓ 使い方ガイド</span><button class="modal-x" id="helpModalClose">&times;</button></div>
+    <div class="help-modal-body">
+      <h2>タイムライン</h2>
+      <p>DAY1・DAY2の予定が1ページに縦並びになっています。上部ナビの「DAY 1」「DAY 2」をタップすると、そのセクションまでスムーズにスクロールします。</p>
+      <p>カードは <strong style="color:var(--transport)">移動</strong>・<strong style="color:var(--sight)">観光</strong>・<strong style="color:var(--food)">食事</strong>・<strong style="color:var(--hotel)">宿泊</strong> で色分け。時間バッジ・ポッチ・カードのどこにカーソルを乗せても連動して浮き上がります。</p>
+      <p><strong>📍 MAP</strong> をタップすると、その場所をGoogleマップで開けます。</p>
+
+      <h2>上部ナビバー</h2>
+      <table class="help-table">
+        <tr><th>ボタン</th><th>機能</th></tr>
+        <tr><td>DAY 1 / 2</td><td>その日の旅程までスクロール</td></tr>
+        <tr><td>▶️</td><td>写真スライドショーを再生（写真を追加したスポットのみ）</td></tr>
+        <tr><td>💰</td><td>各予定の費用を入力して合計を自動計算</td></tr>
+        <tr><td>📤</td><td>しおりのURLを共有</td></tr>
+        <tr><td>?</td><td>このガイドを表示</td></tr>
+        <tr><td>🌙 / ☀️</td><td>ダークモード切替（背景イラストも昼夜で変わります）</td></tr>
+      </table>
+
+      <h2>NOW ハイライト</h2>
+      <p>旅行当日にしおりを開くと、今の時刻に一番近い予定が自動でハイライトされます（1分ごとに更新）。</p>
+
+      <h2>費用管理</h2>
+      <p>各予定カードの💴欄に金額を入力すると、💰ボタンからDay別小計・合計をいつでも確認できます。入力内容は端末に自動保存されます。</p>
+
+      <h2>写真アップロード</h2>
+      <p>各予定カードの「📷 写真」から端末の写真を追加できます。自動でリサイズされ、端末に保存されるので次回開いたときも表示されたままです。</p>
+
+      <h2>持ち物チェックリスト・メモ</h2>
+      <p>チェックリストはタップでON/OFF、進捗バーで準備状況がわかります。下の入力欄から好きな持ち物を追加でき、追加した項目は×で削除できます。メモ欄は入力すると自動保存されます。</p>
+
+      <h2>天気予報</h2>
+      <p>白河エリアの天気を自動取得します。旅行日の約2週間前から予報が表示され、それより先の場合は8月中旬の平年値（気象庁データ）を表示します。</p>
+
+      <h2>自動スクロール・NOWハイライト</h2>
+      <p>旅行当日（8/21・8/22）にしおりを開くと、その日の旅程まで自動でスクロールします。さらに現在時刻に一番近い予定が自動ハイライトされます。</p>
+
+      <h2>共有</h2>
+      <p>📤ボタンでURLを共有（対応端末は共有シート、それ以外はURLをコピー）できます。同行者にリンクを送るだけで同じしおりを見られます。</p>
+
+      <h2>写真スライドショー</h2>
+      <p>▶️ボタンで、写真を追加したスポットだけを自動再生します。画面の左右をタップで前後移動、右上の×またはEscキーで閉じられます。</p>
+
+      <h2>データの保存について</h2>
+      <p>費用・写真・チェックリスト・メモなどはすべて<strong>その端末のブラウザ内</strong>に保存されます（サーバーには送信されません）。同じURLを別の端末やブラウザで開いても、入力内容は共有されず、それぞれ別々に保存される点にご注意ください。</p>
+    </div>
+  </div>
+</div>
+
+<div class="story-overlay" id="storyOverlay">
+  <div class="story-top">
+    <div class="story-dots" id="storyDots"></div>
+    <button class="story-close" id="storyClose" aria-label="閉じる">&times;</button>
+  </div>
+  <div class="story-stage" id="storyStage">
+    <img class="story-img" id="storyImg" alt="">
+    <div class="story-caption">
+      <span class="story-cat" id="storyCat"></span>
+      <div class="story-title" id="storyTitle"></div>
+      <div class="story-time" id="storyTime"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+const PACKING = ['下着','パジャマ（ジャージ）','リズの遊具（ボール、フリスビー）','虫除け','日焼け止め','帽子','リズグッズ','化粧品','5円玉'];
+const CAT_LABEL = {transport:'移動',food:'食事',sight:'観光',hotel:'宿泊'};
+const CAT_ICON = {transport:'🚗',food:'🍴',sight:'📷',hotel:'⛺'};
+const CAT_IMG = {transport:'img/icon-transport.png',sight:'img/icon-sight.png'};
+
+const DATA = {
+  day1: [
+    {time:'07:30', cat:'transport', title:'自宅を出発', detail:''},
+    {dur:'約3時間30分'},
+    {time:'11:00', cat:'hotel', title:'エンゼルフォレスト白河 着', detail:'', map:'エンゼルフォレスト白河'},
+    {time:'11:05', cat:'sight', title:'散歩', detail:''},
+    {time:'12:00', cat:'food', title:'ホテル内カフェ', detail:''},
+    {time:'14:00', cat:'sight', title:'カヌー体験', detail:''},
+    {time:'15:00', cat:'hotel', title:'ホテルにチェックイン', detail:'アルモ ハルモニア宿泊　露天風呂・サウナ付き'},
+    {time:'17:30', cat:'food', title:'バーベキュー', detail:'プレミアムバーベキュー'},
+  ],
+  day2: [
+    {time:'08:00', cat:'food', title:'朝食バイキング', detail:''},
+    {time:'10:00', cat:'hotel', title:'チェックアウト', detail:''},
+    {dur:'車で約40分'},
+    {time:'10:50', cat:'sight', title:'大内宿', detail:'', map:'大内宿'},
+    {time:'11:45', cat:'food', title:'萬屋（よろづや）', detail:'お蕎麦', map:'大内宿 萬屋'},
+    {time:'13:40', cat:'transport', title:'出発', detail:''},
+    {dur:'約20分'},
+    {time:'14:00', cat:'sight', title:'塔のへつり', detail:'', map:'塔のへつり'},
+    {time:'14:30', cat:'sight', title:'虚空蔵菩薩', detail:'本堂でお参り', map:'塔のへつり 虚空蔵尊'},
+    {time:'15:30', cat:'transport', title:'出発', detail:''},
+    {dur:'約2時間30分'},
+    {time:'18:00', cat:'transport', title:'自宅到着', detail:''},
+  ]
+};
+
+// ===== Countdown =====
+function updateCountdown(){
+  const tripStart = new Date(2026, 7, 21, 0, 0, 0);
+  const tripEnd = new Date(2026, 7, 22, 23, 59, 59);
+  const now = new Date();
+  const title = document.getElementById('countdownTitle');
+  const display = document.getElementById('countdownDisplay');
+  const sub = document.getElementById('countdownSub');
+  if(now > tripEnd){
+    title.textContent = '福島キャンプ 2026';
+    display.textContent = '素敵なキャンプでした 🏕️';
+    sub.textContent = '';
+  } else if(now >= tripStart){
+    title.textContent = '🏕️ 福島キャンプ';
+    display.textContent = 'キャンプ中！楽しんで！';
+    sub.textContent = '';
+  } else {
+    const todayM = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    const tripM = new Date(2026, 7, 21);
+    const diff = Math.ceil((tripM - todayM) / 86400000);
+    title.textContent = '出発まで';
+    display.textContent = 'あと ' + diff + ' 日';
+    sub.textContent = '8月21日（金）出発';
+  }
+}
+updateCountdown();
+setInterval(updateCountdown, 60000);
+
+// ===== Checklist (with per-device custom items) =====
+const checklistWrap = document.getElementById('checklist');
+let checkedState = {};
+try{ checkedState = JSON.parse(localStorage.getItem('fukushima-packing') || '{}'); }catch(e){}
+
+function saveChecklist(){
+  const state = {};
+  document.querySelectorAll('.check-item').forEach(function(c){ if(c.classList.contains('checked')) state[c.dataset.key] = true; });
+  checkedState = state;
+  try{ localStorage.setItem('fukushima-packing', JSON.stringify(state)); }catch(e){}
+}
+function saveCustomItems(){
+  const custom = [];
+  document.querySelectorAll('.check-item[data-custom="1"]').forEach(function(c){
+    custom.push({ key: c.dataset.key, label: c.dataset.label });
+  });
+  try{ localStorage.setItem('fukushima-packing-custom', JSON.stringify(custom)); }catch(e){}
+}
+function updateProgress(){
+  const items = document.querySelectorAll('.check-item');
+  const total = items.length;
+  let done = 0;
+  items.forEach(function(c){ if(c.classList.contains('checked')) done++; });
+  document.getElementById('progressFill').style.width = (total ? (done/total*100) : 0) + '%';
+  document.getElementById('progressText').textContent = done + '/' + total;
+}
+function makeCheckItem(key, label, removable){
+  const el = document.createElement('div');
+  el.className = 'check-item';
+  el.dataset.key = key;
+  el.dataset.label = label;
+  if(removable) el.dataset.custom = '1';
+  el.innerHTML = '<span class="check-box">✓</span><span>' + label + '</span>' + (removable ? '<button type="button" class="check-item-remove" aria-label="削除">×</button>' : '');
+  if(checkedState[key]) el.classList.add('checked');
+  el.addEventListener('click', function(e){
+    if(e.target.classList.contains('check-item-remove')){
+      e.stopPropagation();
+      el.remove();
+      saveCustomItems();
+      saveChecklist();
+      updateProgress();
+      return;
+    }
+    el.classList.toggle('checked');
+    saveChecklist();
+    updateProgress();
+  });
+  return el;
+}
+
+PACKING.forEach(function(item, i){
+  checklistWrap.appendChild(makeCheckItem('pack-' + i, item, false));
+});
+try{
+  const custom = JSON.parse(localStorage.getItem('fukushima-packing-custom') || '[]');
+  custom.forEach(function(c){ checklistWrap.appendChild(makeCheckItem(c.key, c.label, true)); });
+}catch(e){}
+updateProgress();
+
+document.getElementById('addItemBtn').addEventListener('click', addChecklistItem);
+document.getElementById('addItemInput').addEventListener('keydown', function(e){ if(e.key === 'Enter') addChecklistItem(); });
+function addChecklistItem(){
+  const input = document.getElementById('addItemInput');
+  const label = input.value.trim();
+  if(!label) return;
+  const key = 'custom-' + Date.now();
+  checklistWrap.appendChild(makeCheckItem(key, label, true));
+  input.value = '';
+  saveCustomItems();
+  updateProgress();
+}
+
+// ===== Memo =====
+const memoEl = document.getElementById('memoText');
+try{ memoEl.value = localStorage.getItem('fukushima-memo') || ''; }catch(e){}
+let memoTimer;
+memoEl.addEventListener('input', function(){
+  clearTimeout(memoTimer);
+  memoTimer = setTimeout(function(){ try{ localStorage.setItem('fukushima-memo', memoEl.value); }catch(e){} }, 600);
+});
+
+// ===== Render timeline =====
+function renderDay(dayKey, elId){
+  const wrap = document.getElementById(elId);
+  let idx = 0;
+  DATA[dayKey].forEach(function(it){
+    if(it.dur){
+      const d = document.createElement('div');
+      d.className = 'duration-badge';
+      d.innerHTML = '<div class="duration-badge-inner">⏱ ' + it.dur + '</div>';
+      wrap.appendChild(d);
+      return;
+    }
+    const key = dayKey + '-' + idx; idx++;
+    const el = document.createElement('div');
+    el.className = 'timeline-item';
+    el.addEventListener('touchstart', function(){}, { passive: true });
+    el.dataset.time = it.time;
+    let mapLink = it.map ? '<a href="https://maps.google.com/maps?q=' + encodeURIComponent(it.map + ' 福島県') + '" target="_blank" rel="noopener" class="card-link">📍 MAP</a>' : '';
+    let catIcon = CAT_IMG[it.cat] ? '<img class="card-cat-icon" src="' + CAT_IMG[it.cat] + '" alt="">' : '';
+    el.innerHTML =
+      '<div class="timeline-time-col"><div class="timeline-time">' + it.time + '</div><div class="timeline-dot ' + it.cat + '">' + CAT_ICON[it.cat] + '</div></div>' +
+      '<span class="now-label">📍 NOW</span>' +
+      '<div class="timeline-card ' + it.cat + '">' +
+        '<div class="card-header"><span class="card-category ' + it.cat + '">' + catIcon + CAT_LABEL[it.cat] + '</span><div class="card-title">' + it.title + '</div></div>' +
+        (it.detail ? '<div class="card-detail">' + it.detail + '</div>' : '') +
+        '<div class="card-photo-wrap" id="photowrap-' + key + '"><img class="card-photo" id="photo-' + key + '"></div>' +
+        '<div class="card-bottom">' +
+          mapLink +
+          '<div class="card-cost-wrap">💴 <input type="number" min="0" placeholder="0" class="card-cost-input" data-key="' + key + '"> 円</div>' +
+          '<label class="photo-btn">📷 写真<input type="file" accept="image/*" class="photo-input" data-key="' + key + '"></label>' +
+        '</div>' +
+      '</div>';
+    wrap.appendChild(el);
+  });
+}
+renderDay('day1', 'timeline1');
+renderDay('day2', 'timeline2');
+
+// ===== Cost persistence =====
+document.querySelectorAll('.card-cost-input').forEach(function(inp){
+  const key = inp.dataset.key;
+  try{ const v = localStorage.getItem('fukushima-cost-' + key); if(v) inp.value = v; }catch(e){}
+  inp.addEventListener('input', function(){
+    try{ localStorage.setItem('fukushima-cost-' + key, inp.value); }catch(e){}
+    updateCosts();
+  });
+});
+function sumDay(dayKey){
+  let sum = 0;
+  document.querySelectorAll('.card-cost-input[data-key^="' + dayKey + '-"]').forEach(function(inp){
+    sum += parseFloat(inp.value) || 0;
+  });
+  return sum;
+}
+function updateCosts(){
+  const s1 = sumDay('day1'), s2 = sumDay('day2');
+  document.getElementById('sum1').textContent = '¥' + s1.toLocaleString();
+  document.getElementById('sum2').textContent = '¥' + s2.toLocaleString();
+  document.getElementById('sumTotal').textContent = '¥' + (s1 + s2).toLocaleString();
+}
+updateCosts();
+
+// ===== Photo upload =====
+const PRESET_PHOTOS = {
+  'day1-1': 'img/preset-day1-1.jpg',
+  'day1-5': 'img/preset-day1-5.jpg',
+  'day1-6': 'img/preset-day1-6.jpg',
+  'day2-2': 'img/preset-day2-2.jpg',
+  'day2-3': 'img/preset-day2-3.jpg',
+  'day2-5': 'img/preset-day2-5.jpg',
+  'day2-6': 'img/preset-day2-6.jpg'
+};
+document.querySelectorAll('.photo-input').forEach(function(input){
+  const key = input.dataset.key;
+  const wrap = document.getElementById('photowrap-' + key);
+  const img = document.getElementById('photo-' + key);
+  try{
+    const saved = localStorage.getItem('fukushima-photo-' + key);
+    if(saved){ img.src = saved; wrap.classList.add('has-photo'); }
+    else if(PRESET_PHOTOS[key]){ img.src = PRESET_PHOTOS[key]; wrap.classList.add('has-photo'); }
+  }catch(e){
+    if(PRESET_PHOTOS[key]){ img.src = PRESET_PHOTOS[key]; wrap.classList.add('has-photo'); }
+  }
+  input.addEventListener('change', function(e){
+    const file = e.target.files[0];
+    if(!file) return;
+    const reader = new FileReader();
+    reader.onload = function(ev){
+      const image = new Image();
+      image.onload = function(){
+        const canvas = document.createElement('canvas');
+        const maxSide = 1200;
+        let w = image.width, h = image.height;
+        if(w > h && w > maxSide){ h = h*maxSide/w; w = maxSide; }
+        else if(h > maxSide){ w = w*maxSide/h; h = maxSide; }
+        canvas.width = w; canvas.height = h;
+        canvas.getContext('2d').drawImage(image, 0, 0, w, h);
+        const dataUrl = canvas.toDataURL('image/jpeg', 0.72);
+        img.src = dataUrl; wrap.classList.add('has-photo');
+        try{ localStorage.setItem('fukushima-photo-' + key, dataUrl); }
+        catch(err){ alert('保存容量オーバーです。別の写真をお試しください。'); }
+      };
+      image.src = ev.target.result;
+    };
+    reader.readAsDataURL(file);
+  });
+});
+
+// ===== Scroll fade-in =====
+const observer = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+document.querySelectorAll('.timeline-item').forEach(function(e, i){
+  e.style.transitionDelay = ((i % 6) * 0.06) + 's';
+  observer.observe(e);
+});
+
+// ===== Sticky nav shadow =====
+const nav = document.getElementById('dayNav');
+window.addEventListener('scroll', function(){ nav.classList.toggle('scrolled', window.scrollY > 100); });
+
+// ===== Day nav scroll-to =====
+const navBtns = document.querySelectorAll('.nav-day-btn');
+navBtns.forEach(function(btn){
+  btn.addEventListener('click', function(){
+    document.getElementById(btn.dataset.target).scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+const dayObs = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){
+      navBtns.forEach(function(b){ b.classList.remove('active'); });
+      const match = document.querySelector('[data-target="' + e.target.id + '"]');
+      if(match) match.classList.add('active');
+    }
+  });
+}, { threshold: 0.2 });
+document.querySelectorAll('.day-section').forEach(function(s){ dayObs.observe(s); });
+
+document.getElementById('navBrand').addEventListener('click', function(){
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// ===== Theme toggle =====
+function toggleTheme(){
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  document.documentElement.setAttribute('data-theme', isDark ? '' : 'dark');
+  document.getElementById('themeBtn').textContent = isDark ? '🌙' : '☀️';
+  try{ localStorage.setItem('fukushima-theme', isDark ? 'light' : 'dark'); }catch(e){}
+}
+document.getElementById('themeBtn').addEventListener('click', toggleTheme);
+try{
+  if(localStorage.getItem('fukushima-theme') === 'dark'){
+    document.documentElement.setAttribute('data-theme', 'dark');
+    document.getElementById('themeBtn').textContent = '☀️';
+  }
+}catch(e){}
+
+// ===== Cost modal =====
+const costModal = document.getElementById('costModal');
+document.getElementById('costBtn').addEventListener('click', function(){ updateCosts(); costModal.classList.add('open'); });
+document.getElementById('costModalClose').addEventListener('click', function(){ costModal.classList.remove('open'); });
+costModal.addEventListener('click', function(e){ if(e.target === costModal) costModal.classList.remove('open'); });
+
+// ===== Back to top =====
+const backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', function(){ backToTop.classList.toggle('visible', window.scrollY > 600); });
+backToTop.addEventListener('click', function(){ window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+// ===== Story mode (photo slideshow, only spots with a photo) =====
+let storySlides = [];
+let storyIndex = 0;
+let storyTimer = null;
+const STORY_DURATION = 3500;
+
+function buildStorySlides(){
+  const wraps = document.querySelectorAll('.card-photo-wrap.has-photo');
+  const slides = [];
+  wraps.forEach(function(wrap){
+    const img = wrap.querySelector('img');
+    const item = wrap.closest('.timeline-item');
+    if(!img || !img.src || !item) return;
+    const titleEl = item.querySelector('.card-title');
+    const timeEl = item.querySelector('.timeline-time');
+    const cardEl = item.querySelector('.timeline-card');
+    let cat = 'sight';
+    ['transport','food','sight','hotel'].forEach(function(c){ if(cardEl && cardEl.classList.contains(c)) cat = c; });
+    slides.push({
+      src: img.src,
+      title: titleEl ? titleEl.textContent : '',
+      time: timeEl ? timeEl.textContent : '',
+      cat: cat
+    });
+  });
+  return slides;
+}
+
+function renderStoryDots(){
+  const wrap = document.getElementById('storyDots');
+  wrap.innerHTML = '';
+  storySlides.forEach(function(_, i){
+    const d = document.createElement('div');
+    d.className = 'story-dot' + (i <= storyIndex ? ' filled' : '');
+    wrap.appendChild(d);
+  });
+}
+
+function renderStorySlide(){
+  const s = storySlides[storyIndex];
+  if(!s) return;
+  document.getElementById('storyImg').src = s.src;
+  document.getElementById('storyTitle').textContent = s.title;
+  document.getElementById('storyTime').textContent = s.time;
+  document.getElementById('storyCat').textContent = CAT_LABEL[s.cat] || '';
+  renderStoryDots();
+}
+
+function stopStoryTimer(){
+  if(storyTimer){ clearInterval(storyTimer); storyTimer = null; }
+}
+function startStoryTimer(){
+  stopStoryTimer();
+  storyTimer = setInterval(function(){
+    storyIndex = (storyIndex + 1) % storySlides.length;
+    renderStorySlide();
+  }, STORY_DURATION);
+}
+
+function goToStorySlide(i){
+  if(storySlides.length === 0) return;
+  storyIndex = (i + storySlides.length) % storySlides.length;
+  renderStorySlide();
+  startStoryTimer();
+}
+
+function openStory(){
+  storySlides = buildStorySlides();
+  if(storySlides.length === 0){
+    alert('写真が追加されているスポットがまだありません。各予定の「📷 写真」から追加すると再生できます。');
+    return;
+  }
+  storyIndex = 0;
+  document.getElementById('storyOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  renderStorySlide();
+  startStoryTimer();
+}
+function closeStory(){
+  document.getElementById('storyOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+  stopStoryTimer();
+}
+
+document.getElementById('storyBtn').addEventListener('click', openStory);
+document.getElementById('storyClose').addEventListener('click', function(e){ e.stopPropagation(); closeStory(); });
+document.getElementById('storyStage').addEventListener('click', function(e){
+  const rect = this.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  if(x < rect.width / 2){ goToStorySlide(storyIndex - 1); }
+  else { goToStorySlide(storyIndex + 1); }
+});
+document.addEventListener('keydown', function(e){
+  if(!document.getElementById('storyOverlay').classList.contains('open')) return;
+  if(e.key === 'Escape') closeStory();
+  else if(e.key === 'ArrowRight') goToStorySlide(storyIndex + 1);
+  else if(e.key === 'ArrowLeft') goToStorySlide(storyIndex - 1);
+});
+
+// ===== Help modal =====
+const helpModal = document.getElementById('helpModal');
+document.getElementById('helpBtn').addEventListener('click', function(){ helpModal.classList.add('open'); });
+document.getElementById('helpModalClose').addEventListener('click', function(){ helpModal.classList.remove('open'); });
+helpModal.addEventListener('click', function(e){ if(e.target === helpModal) helpModal.classList.remove('open'); });
+
+// ===== Share (Web Share API, no QR) =====
+document.getElementById('shareBtn').addEventListener('click', function(){
+  const btn = document.getElementById('shareBtn');
+  if(navigator.share){
+    navigator.share({
+      title: '福島キャンプのしおり 2026.8.21-8.22',
+      text: 'エンゼルフォレスト白河・大内宿・塔のへつりをめぐる1泊2日のキャンプ旅程',
+      url: window.location.href
+    }).catch(function(){});
+  } else {
+    navigator.clipboard.writeText(window.location.href).then(function(){
+      btn.textContent = '✓';
+      setTimeout(function(){ btn.textContent = '📤'; }, 1500);
+    });
+  }
+});
+
+// ===== NOW highlight =====
+function highlightNow(){
+  const now = new Date();
+  const today = now.toISOString().split('T')[0];
+  const nowM = now.getHours() * 60 + now.getMinutes();
+  document.querySelectorAll('.timeline-item.now-here').forEach(function(e){ e.classList.remove('now-here'); });
+  const tl = document.querySelector('.timeline[data-day="' + today + '"]');
+  if(!tl) return;
+  let closest = null, closestD = Infinity;
+  tl.querySelectorAll('.timeline-item[data-time]').forEach(function(item){
+    const p = item.dataset.time.split(':');
+    const d = nowM - (parseInt(p[0]) * 60 + parseInt(p[1]));
+    if(d >= 0 && d < closestD){ closestD = d; closest = item; }
+  });
+  if(closest) closest.classList.add('now-here');
+}
+highlightNow();
+setInterval(highlightNow, 60000);
+
+// ===== Ambient particles: fireflies at night, feathers in daylight =====
+let particlesActive = true;
+function isDarkMode(){ return document.documentElement.getAttribute('data-theme') === 'dark'; }
+function createFirefly(){
+  const c = document.getElementById('fireflyContainer');
+  const f = document.createElement('div');
+  f.className = 'firefly';
+  const l = Math.random() * 100;
+  const dur = (5 + Math.random() * 6) * 1.43;
+  const sz = (4 + Math.random() * 5) * 1.3;
+  const drift = (Math.random() - 0.5) * 80;
+  const del = Math.random() * 1.5;
+  f.style.cssText = 'left:' + l + '%;animation-duration:' + dur + 's,2.3s;animation-delay:' + del + 's,0s;--fsize:' + sz + 'px;--drift:' + drift + 'px';
+  c.appendChild(f);
+  setTimeout(function(){ f.remove(); }, (dur + del) * 1000 + 400);
+}
+function createSparkle(){
+  const c = document.getElementById('fireflyContainer');
+  const s = document.createElement('div');
+  s.className = 'sparkle';
+  const l = Math.random() * 100;
+  const dur = 3 + Math.random() * 3;
+  const sz = (3 + Math.random() * 6) * 1.3;
+  const drift = (Math.random() - 0.5) * 60;
+  s.style.cssText = 'left:' + l + '%;width:' + sz + 'px;height:' + sz + 'px;animation-duration:' + dur + 's,.5s;--drift:' + drift + 'px';
+  c.appendChild(s);
+  setTimeout(function(){ s.remove(); }, dur * 1000 + 150);
+}
+function particleLoop(){
+  if(!particlesActive) return;
+  if(isDarkMode()) createSparkle(); else createFirefly();
+  setTimeout(particleLoop, 500 + Math.random() * 900);
+}
+particleLoop();
+
+// ===== Weather (Open-Meteo) =====
+async function fetchWeather(){
+  const container = document.getElementById('weatherDays');
+  const note = document.getElementById('weatherNote');
+  const dates = ['2026-08-21', '2026-08-22'];
+  const labels = ['8/21（金）', '8/22（土）'];
+  const cacheKey = 'fukushima-weather-cache';
+  try{
+    const cached = JSON.parse(localStorage.getItem(cacheKey));
+    if(cached && (Date.now() - cached.ts < 3600000)){ render(cached.data); return; }
+  }catch(e){}
+  try{
+    const res = await fetch('https://api.open-meteo.com/v1/forecast?latitude=37.15&longitude=140.20&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=Asia%2FTokyo&forecast_days=16');
+    if(!res.ok) throw new Error('api error');
+    const data = await res.json();
+    try{ localStorage.setItem(cacheKey, JSON.stringify({ ts: Date.now(), data: data })); }catch(e){}
+    render(data);
+  }catch(e){
+    container.innerHTML = '<div class="weather-error">天気予報を取得できませんでした</div>';
+    document.getElementById('weatherHistory').style.display = 'block';
+  }
+  function icon(code){
+    if(code === 0) return '☀️';
+    if([1,2].includes(code)) return '🌤';
+    if(code === 3) return '☁️';
+    if([45,48].includes(code)) return '🌫';
+    if([51,53,55,61,63,65,80,81,82].includes(code)) return '🌧';
+    if([95,96,99].includes(code)) return '⛈';
+    if([71,73,75,77,85,86].includes(code)) return '❄️';
+    return '🌡';
+  }
+  function render(data){
+    const d = data.daily;
+    let html = '', found = false;
+    dates.forEach(function(date, idx){
+      const i = d.time.indexOf(date);
+      if(i !== -1){
+        found = true;
+        const hi = Math.round(d.temperature_2m_max[i]);
+        const lo = Math.round(d.temperature_2m_min[i]);
+        const rain = d.precipitation_probability_max[i];
+        html += '<div class="weather-day"><div class="weather-day-label">' + labels[idx] + '</div><div class="weather-day-icon">' + icon(d.weather_code[i]) + '</div><div class="weather-day-temp">' + hi + '° <span class="weather-day-temp-min">/ ' + lo + '°</span></div><div class="weather-day-detail">☔ ' + rain + '%</div></div>';
+      }
+    });
+    if(found){
+      container.innerHTML = html;
+      note.textContent = 'Open-Meteo提供 · 自動更新';
+      document.getElementById('weatherHistory').style.display = 'none';
+    } else {
+      container.innerHTML = '<div class="weather-error">旅行日の予報はまだ配信されていません（約2週間前から表示）</div>';
+      document.getElementById('weatherHistory').style.display = 'block';
+    }
+  }
+}
+fetchWeather();
+
+// ===== Auto-scroll to today's day on trip dates =====
+(function autoScrollToday(){
+  const today = new Date().toISOString().split('T')[0];
+  const dates = { '2026-08-21': 'day1', '2026-08-22': 'day2' };
+  if(dates[today]){
+    setTimeout(function(){
+      document.getElementById(dates[today]).scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 1200);
+  }
+})();
+</script>
+</body>
+</html>
