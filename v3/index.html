@@ -19,16 +19,8 @@
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}html{scroll-behavior:smooth;overflow-x:clip}
 img,a,button{-webkit-touch-callout:none;-webkit-user-select:none;user-select:none}
 body{font-family:'Zen Kaku Gothic New',sans-serif;background:var(--warm-white);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased;transition:background .4s,color .4s;overflow-x:clip;-webkit-touch-callout:none;-webkit-user-select:none;user-select:none}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important}.firefly-container{display:none!important}}
 *:focus-visible{outline:2px solid var(--ember);outline-offset:2px;border-radius:4px}
 input,textarea{-webkit-user-select:text!important;user-select:text!important;-webkit-touch-callout:default!important}
-.firefly-container{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:9999}
-.firefly{position:absolute;bottom:-10px;width:var(--fsize,6px);height:var(--fsize,6px);background:radial-gradient(circle,#FFF6D8 0%,#FFE9B0 45%,#F3C56A 80%);box-shadow:0 0 8px 2px rgba(255,220,130,.7);opacity:0;animation:flyUp linear forwards,flicker 1.6s ease-in-out infinite;pointer-events:none;clip-path:polygon(50% 0%,58% 32%,85% 15%,68% 42%,100% 50%,68% 58%,85% 85%,58% 68%,50% 100%,42% 68%,15% 85%,32% 58%,0% 50%,32% 42%,15% 15%,42% 32%)}
-@keyframes flyUp{0%{opacity:0;transform:translate(0,0)}12%{opacity:.9}80%{opacity:.8}100%{opacity:0;transform:translate(var(--drift,20px),-105vh)}}
-@keyframes flicker{0%,100%{filter:brightness(.65)}50%{filter:brightness(1.25)}}
-.sparkle{position:absolute;bottom:-10px;background:linear-gradient(180deg,#FFF3C4 0%,#FFAA3D 45%,#E8531F 100%);box-shadow:0 0 6px 1px rgba(255,110,30,.6);opacity:0;animation:emberRise linear forwards,emberFlicker .5s ease-in-out infinite;pointer-events:none;clip-path:polygon(50% 0%,75% 30%,90% 60%,75% 100%,25% 100%,10% 60%,25% 30%)}
-@keyframes emberRise{0%{opacity:0;transform:translate(0,0)}15%{opacity:1}55%{opacity:.75}100%{opacity:0;transform:translate(var(--drift,15px),-60vh)}}
-@keyframes emberFlicker{0%,100%{filter:brightness(.85)}50%{filter:brightness(1.3)}}
 .hero{position:relative;min-height:92vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#3F7A52}
 .hero-bg{position:absolute;inset:0;background-size:cover;background-position:center 68%;transition:opacity 1s ease}
 .hero-bg-light{background-image:linear-gradient(180deg,rgba(20,60,30,.18),rgba(20,40,25,.45)),url('img/hero-day.jpg');opacity:1}
@@ -225,7 +217,6 @@ footer{text-align:center;padding:3rem 1rem;font-size:.72rem;color:var(--ink-fain
 </head>
 <body>
 
-<div class="firefly-container" id="fireflyContainer"></div>
 <section class="hero">
   <div class="hero-bg hero-bg-light"></div>
   <div class="hero-bg hero-bg-dark"></div>
@@ -822,41 +813,6 @@ function highlightNow(){
 }
 highlightNow();
 setInterval(highlightNow, 60000);
-
-// ===== Ambient particles: fireflies at night, feathers in daylight =====
-let particlesActive = true;
-function isDarkMode(){ return document.documentElement.getAttribute('data-theme') === 'dark'; }
-function createFirefly(){
-  const c = document.getElementById('fireflyContainer');
-  const f = document.createElement('div');
-  f.className = 'firefly';
-  const l = Math.random() * 100;
-  const dur = (5 + Math.random() * 6) * 1.43;
-  const sz = (4 + Math.random() * 5) * 1.3;
-  const drift = (Math.random() - 0.5) * 80;
-  const del = Math.random() * 1.5;
-  f.style.cssText = 'left:' + l + '%;animation-duration:' + dur + 's,2.3s;animation-delay:' + del + 's,0s;--fsize:' + sz + 'px;--drift:' + drift + 'px';
-  c.appendChild(f);
-  setTimeout(function(){ f.remove(); }, (dur + del) * 1000 + 400);
-}
-function createSparkle(){
-  const c = document.getElementById('fireflyContainer');
-  const s = document.createElement('div');
-  s.className = 'sparkle';
-  const l = Math.random() * 100;
-  const dur = 3 + Math.random() * 3;
-  const sz = (3 + Math.random() * 6) * 1.3;
-  const drift = (Math.random() - 0.5) * 60;
-  s.style.cssText = 'left:' + l + '%;width:' + sz + 'px;height:' + sz + 'px;animation-duration:' + dur + 's,.5s;--drift:' + drift + 'px';
-  c.appendChild(s);
-  setTimeout(function(){ s.remove(); }, dur * 1000 + 150);
-}
-function particleLoop(){
-  if(!particlesActive) return;
-  if(isDarkMode()) createSparkle(); else createFirefly();
-  setTimeout(particleLoop, 500 + Math.random() * 900);
-}
-particleLoop();
 
 // ===== Weather (Open-Meteo) =====
 async function fetchWeather(){
