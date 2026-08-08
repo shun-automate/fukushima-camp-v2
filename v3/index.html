@@ -137,10 +137,10 @@ input,textarea{-webkit-user-select:text!important;user-select:text!important;-we
 .timeline-dot.hotel{background:var(--hotel)}
 .timeline-card{background:none;border:none;box-shadow:none;padding:0;cursor:pointer}
 .timeline-item{-webkit-touch-callout:none;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
-.timeline-item:active .timeline-dot{transform:scale(1.2);box-shadow:0 4px 12px rgba(0,0,0,.28)}
-.timeline-item:active .timeline-time{transform:scale(1.08) translateY(-1px);color:var(--ink)}
-.timeline-item:active .card-title{transform:translateX(3px)}
-.timeline-item:active .card-photo{transform:scale(1.035)}
+.timeline-item.is-active .timeline-dot{transform:scale(1.2);box-shadow:0 4px 12px rgba(0,0,0,.28)}
+.timeline-item.is-active .timeline-time{transform:scale(1.08) translateY(-1px);color:var(--ink)}
+.timeline-item.is-active .card-title{transform:translateX(3px)}
+.timeline-item.is-active .card-photo{transform:scale(1.035)}
 .card-header{position:relative;z-index:2;margin-top:.5rem;transition:margin-top .3s}
 .card-title{font-size:1.05rem;font-weight:700;font-family:'Zen Old Mincho',serif;transition:transform .2s,color .2s}
 .card-detail{font-size:.8rem;color:var(--ink-light);margin-top:.5rem;line-height:1.75}
@@ -150,8 +150,8 @@ input,textarea{-webkit-user-select:text!important;user-select:text!important;-we
 .card-cost-input{width:70px;border:none;border-bottom:1px dashed rgba(128,128,128,.3);padding:.2rem .1rem;font-size:.78rem;font-family:inherit;text-align:right;background:none;color:var(--ink)}
 .card-photo-wrap{position:relative;width:94%;max-width:460px;aspect-ratio:1/1;margin:.6rem 0 0 0;overflow:visible;display:none}
 .card-photo-wrap.has-photo{display:block}
-.card-photo-glow{position:absolute;inset:-14%;object-fit:cover;width:128%;height:128%;border-radius:50%;filter:blur(26px) saturate(1.15);opacity:.55;z-index:0}
-.card-photo{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;border-radius:46% 54% 55% 45% / 55% 45% 55% 45%;-webkit-mask-image:radial-gradient(ellipse 68% 68% at 50% 50%,#000 30%,transparent 96%);mask-image:radial-gradient(ellipse 68% 68% at 50% 50%,#000 30%,transparent 96%);transition:transform .25s}
+.card-photo-glow{display:none}
+.card-photo{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;border-radius:46% 54% 55% 45% / 55% 45% 55% 45%;-webkit-mask-image:radial-gradient(ellipse 72% 72% at 50% 50%,#000 66%,transparent 100%);mask-image:radial-gradient(ellipse 72% 72% at 50% 50%,#000 66%,transparent 100%);filter:drop-shadow(0 10px 18px rgba(90,60,20,.14));transition:transform .25s}
 .card-photo-wrap.has-photo + .card-header{margin-top:-3.6rem;padding:0 .3rem}
 .card-photo-wrap.has-photo + .card-header .card-title{color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.65),0 1px 4px rgba(0,0,0,.6)}
 .photo-btn{display:inline-flex;align-items:center;gap:.3rem;font-size:.68rem;color:var(--ink-faint);border:1px dashed rgba(139,98,57,.35);border-radius:6px;padding:.2rem .6rem;cursor:pointer;background:none;font-family:inherit}
@@ -552,14 +552,17 @@ function renderDay(dayKey, elId){
     const key = dayKey + '-' + idx; idx++;
     const el = document.createElement('div');
     el.className = 'timeline-item';
-    el.addEventListener('touchstart', function(){}, { passive: true });
+    el.addEventListener('touchstart', function(){ el.classList.add('is-active'); }, { passive: true });
+    ['touchend','touchcancel'].forEach(function(evt){
+      el.addEventListener(evt, function(){ el.classList.remove('is-active'); });
+    });
     el.dataset.time = it.time;
     let mapLink = it.map ? '<a href="https://maps.google.com/maps?q=' + encodeURIComponent(it.map + ' 福島県') + '" target="_blank" rel="noopener" class="card-link">📍 MAP</a>' : '';
     el.innerHTML =
       '<div class="timeline-time-col"><div class="timeline-time">' + it.time + '</div><div class="timeline-dot ' + it.cat + '">' + CAT_ICON[it.cat] + '</div></div>' +
       '<span class="now-label">📍 NOW</span>' +
       '<div class="timeline-card ' + it.cat + '">' +
-        '<div class="card-photo-wrap" id="photowrap-' + key + '"><img class="card-photo-glow" id="photoglow-' + key + '" aria-hidden="true"><img class="card-photo" id="photo-' + key + '"></div>' +
+        '<div class="card-photo-wrap" id="photowrap-' + key + '"><img class="card-photo" id="photo-' + key + '"></div>' +
         '<div class="card-header"><div class="card-title">' + it.title + '</div></div>' +
         (it.detail ? '<div class="card-detail">' + it.detail + '</div>' : '') +
         '<div class="card-bottom">' +
