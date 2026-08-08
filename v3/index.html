@@ -148,7 +148,7 @@ input,textarea{-webkit-user-select:text!important;user-select:text!important;-we
 .card-link{font-size:.7rem;color:var(--transport);text-decoration:none;padding:.15rem 0;border-bottom:1px solid rgba(139,98,57,.35)}
 .card-cost-wrap{display:flex;align-items:center;gap:.3rem;font-size:.75rem;color:var(--ink-faint)}
 .card-cost-input{width:70px;border:none;border-bottom:1px dashed rgba(128,128,128,.3);padding:.2rem .1rem;font-size:.78rem;font-family:inherit;text-align:right;background:none;color:var(--ink)}
-.card-photo-wrap{position:relative;width:calc(100% + 2.8rem + 116px);max-width:none;aspect-ratio:4/3;margin:.6rem -1.4rem 0 calc(-1.4rem - 58px);overflow:visible;display:none;z-index:0}
+.card-photo-wrap{position:relative;width:100%;aspect-ratio:4/3;margin:.6rem 0 0 0;overflow:visible;display:none;z-index:0}
 .card-photo-wrap.has-photo{display:block}
 .card-photo-glow{display:none}
 .card-photo{position:relative;z-index:1;width:112%;height:112%;left:-6%;top:-6%;object-fit:cover;-webkit-mask-image:radial-gradient(ellipse 62% 62% at 50% 50%,#000 22%,rgba(0,0,0,.75) 45%,rgba(0,0,0,.32) 65%,transparent 88%);mask-image:radial-gradient(ellipse 62% 62% at 50% 50%,#000 22%,rgba(0,0,0,.75) 45%,rgba(0,0,0,.32) 65%,transparent 88%);transition:transform .25s}
@@ -577,6 +577,22 @@ function renderDay(dayKey, elId){
 renderDay('day1', 'timeline1');
 renderDay('day2', 'timeline2');
 
+// ===== Full-bleed photo edges (measured, not calc-guessed) =====
+function fullBleedPhotos(){
+  document.querySelectorAll('.card-photo-wrap.has-photo').forEach(function(wrap){
+    wrap.style.marginLeft = '0px';
+    wrap.style.width = '100%';
+    const rect = wrap.getBoundingClientRect();
+    const vw = window.innerWidth;
+    wrap.style.marginLeft = (-rect.left) + 'px';
+    wrap.style.width = vw + 'px';
+  });
+}
+window.addEventListener('resize', fullBleedPhotos);
+window.addEventListener('load', fullBleedPhotos);
+setTimeout(fullBleedPhotos, 300);
+setTimeout(fullBleedPhotos, 1200);
+
 // ===== Cost persistence =====
 document.querySelectorAll('.card-cost-input').forEach(function(inp){
   const key = inp.dataset.key;
@@ -618,10 +634,10 @@ document.querySelectorAll('.photo-input').forEach(function(input){
   const glow = document.getElementById('photoglow-' + key);
   try{
     const saved = localStorage.getItem('fukushima-photo-' + key);
-    if(saved){ img.src = saved; if(glow) glow.src = saved; wrap.classList.add('has-photo'); }
-    else if(PRESET_PHOTOS[key]){ img.src = PRESET_PHOTOS[key]; if(glow) glow.src = PRESET_PHOTOS[key]; wrap.classList.add('has-photo'); }
+    if(saved){ img.src = saved; if(glow) glow.src = saved; wrap.classList.add('has-photo'); setTimeout(fullBleedPhotos, 50); }
+    else if(PRESET_PHOTOS[key]){ img.src = PRESET_PHOTOS[key]; if(glow) glow.src = PRESET_PHOTOS[key]; wrap.classList.add('has-photo'); setTimeout(fullBleedPhotos, 50); }
   }catch(e){
-    if(PRESET_PHOTOS[key]){ img.src = PRESET_PHOTOS[key]; if(glow) glow.src = PRESET_PHOTOS[key]; wrap.classList.add('has-photo'); }
+    if(PRESET_PHOTOS[key]){ img.src = PRESET_PHOTOS[key]; if(glow) glow.src = PRESET_PHOTOS[key]; wrap.classList.add('has-photo'); setTimeout(fullBleedPhotos, 50); }
   }
   input.addEventListener('change', function(e){
     const file = e.target.files[0];
